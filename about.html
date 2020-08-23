@@ -1,0 +1,819 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         
+        <title>About us</title>
+        <style>
+          * {box-sizing: border-box}
+                    body {font-family: Verdana, sans-serif; margin:0; overflow-x: hidden}
+            .fa {
+			font-size: 80px;
+			cursor: pointer;
+			user-select: none;
+}
+
+		.fa:hover {
+			color:rgb(240, 185, 3);
+			}
+
+            .mySlides {
+            display:none;
+            width: 100%;
+            height: 100%;
+            }
+
+            img.about{
+                height: 80%;
+                width:80%;
+                box-shadow: 5px 5px 5px grey;
+            }
+            .mydiv{
+                padding-left: 5%;
+                padding-right: 5%;
+                padding-top: 5%;
+                padding-bottom: 2%;
+
+            }
+            b{
+                color: orange;
+            }
+            body{
+                font-size: 220%;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+                
+            }
+            .info{
+                font-size: 46%;
+                font-family:Verdana, Geneva, Tahoma, sans-serif;
+            }
+            .mydiv2{
+                width: 30%;
+                height: 50%;
+                float: left;
+                padding-top: 4%;
+                font-size:22;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+               
+               
+            }
+            .name
+            {
+                width:40%;
+                height:1%;
+                text-shadow: 1px 0px 1px 1px;
+               color:orange;
+                
+            }
+            
+            
+            #BlackTable{
+                      display: inline-flexbox;
+                      margin: 0px;
+                      background-color:rgba(26,26,26,0.9);
+                      font-family: 'Times New Roman', Times, serif;
+                     }
+            .footerTable{
+                    border-top-style: dashed;
+                    border-bottom-style: dashed;
+                    border-width: 5px;
+                    color: #C4AE83;
+                  }
+                    hr{
+                      background-color:rgba(26,26,26,0.9);
+                      
+                    }
+                    .topnav {
+                    overflow: hidden;
+                    background: rgba(26,26,26,0.9);
+                  }
+
+                  .topnav a {
+                    float: right;
+                    display: block;
+                    color: #f2f2f2;
+                    text-align: center;
+                    padding: 14px 16px;
+                    border-radius: 40px;
+                    text-decoration: none;
+                    font-size: 17px;
+                    box-shadow: #ddd;
+                  }
+                  .topnav a:hover {
+                    background-color: rgba(26,26,26,0.8);
+                    color: white;
+                    -ms-transform: scale(0.9);
+                    -webkit-transform: scale(0.9);
+                    transform: scale(0.9);
+                    transition: transform .2s;
+                    
+                  }
+                  .topnav a.active {
+                    background-color: orange;
+                    color: white;
+                  }
+
+                  .topnav .icon {
+                    display: none;
+                  }
+
+                  @media screen and (max-width: 600px) {
+                    .topnav a:not(:first-child) {display: none;}
+                    .topnav a.icon {
+                      float: left;
+                      display: block;
+                    }
+                  }
+
+                  @media screen and (max-width: 600px) {
+                    .topnav.responsive 
+                  {position: relative;}
+                    .topnav.responsive .icon {
+                      position: absolute;
+                      right: 0;
+                      top: 0;
+                    }
+                    .topnav.responsive a {
+                      float: none;
+                      display: block;
+                      text-align: left;
+                    }
+                  }
+                  .MenuBox{
+                    background-color:	#696969; 
+                    border-style: outset;
+                    box-shadow: 1px 1px 11px dimgray;
+                    border-color: #666; 
+                    background: transparent;
+                    color: white;
+                    padding: 10px 10px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: block;
+                    font-size: 18px;
+                    margin: 4px 2px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                  }
+                  .newdiv{
+                      width:70%;
+                      height:1%,1%;
+                      padding-left: 5%;
+                      font-family:'Times New Roman', Times, serif;
+                      font-size: 20pt;
+
+                  }
+                  h1{
+                    color: orange;
+                    width:85%;
+                 }
+                 input[type=text], textarea {
+                    width: 600px;
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    border-radius: 1px;
+                    box-sizing: border-box;
+                    margin-top: 6px;
+                    margin-bottom: 16px;
+                    resize: vertical;
+                 }      
+                 button{
+                    background-color: rgb(221, 123, 10);
+                    color: white;
+                    padding: 12px 18px;
+                    border:black;
+                    border-radius: 4px;
+                    cursor:pointer;
+                 }
+
+                    h2{
+                    color:orange;
+                 }
+				 
+                 .fa {
+  font-size: 50px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fa:hover {
+  color:orange;
+}
+
+
+ /*Full-width input fields */
+
+ input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0px 22px 0;
+  background: #f1f1f1;
+}
+
+/* Set a style for all buttons */
+
+button {
+  background-color: orange;
+  padding: 14px 20px;
+  width: 20%;
+}
+
+/* Extra styles for the cancel button */
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+  border: 5px solid darkgray;
+}
+.signupbtn,.logbtn{
+  padding: 14px 20px;
+  background-color: rgb(24, 185, 24);
+  border: 5px solid darkgray;
+  float: right; 
+  }
+
+.signupbtn:hover {
+	background-color: rgb(83, 233, 83);
+}
+
+.logbtn:hover {
+	background-color: rgb(5, 172, 5);
+}
+
+.cancelbtn:hover {
+	background-color:red;
+}
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn,.logbtn {
+  
+  width: 49%;
+  border-radius: 10px;
+}
+
+/* Add padding to container elements */
+.container2 {
+  padding: 16px;
+  background-color: rgba(26,26,26,0.4);
+  border-radius: 30px;
+}
+
+/* The Modal (background) */
+.modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  /*overflow: auto; Enable scroll if needed */
+  background-color: rgba(26, 26, 26, 0.5);
+  padding-top: 0%;
+  /*border: 5px solid darkgray;*/
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.container2 input {
+	border: 1px solid gray;
+}
+
+.modal-content2 {
+  background-color: white;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 25%; /* Could be more or less, depending on screen size */
+  border-radius: 30px;
+  border-style: outset;
+  border-color:5px solid gray;
+  
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.close-signup {
+	display: inline-block;
+	float: right;
+	font-size: 20px;
+	cursor: pointer;
+}
+.close-signup:hover {
+	color: red;
+}
+
+.container2 h1 {
+	margin : 0%;
+	display: inline-block;
+  font-size: 100%;
+  color: black;
+}
+ 
+
+.fntcolor{
+  font-size: 45%;
+  
+}
+
+
+
+
+
+
+        </style>
+       
+    </head>
+    <body onload="myCookie()">
+
+
+
+      <script type="text/javascript">
+
+        function getCookie(cookieName)
+                {
+                    var name = cookieName + "=";
+                    var allCookieArray = document.cookie.split(';');
+                      for(var i=0; i<allCookieArray.length; i++)
+                        {
+                          var temp = allCookieArray[i].trim();
+                          if (temp.indexOf(name)==0)
+                          return temp.substring(name.length,temp.length);
+                 }
+                return "";
+            }
+
+
+        function LoginUser() {
+          var length = getCookie('Total_User')
+                for(let i=0; i<=length; i++) {
+                   var username = document.getElementById('myUserReg').value
+                   var password = document.getElementById('myPassReg').value
+                   var user = getCookie('User '+i)
+                   var pass = getCookie('Password '+i)
+                 if(username == user)
+                     {
+                        if(password == pass)
+                            {
+                                alert("Welcome back "+username)
+                                return true;
+                        }
+                            else
+                            {
+                                alert("wrong Password")
+                                return false;
+                        }
+               }
+              }
+            alert("username does not exist")
+            return false;
+      }
+
+
+      </script>
+
+
+
+
+      
+      
+<!--//////////////////             For Registration            ///////////////////////////-->   
+
+
+      <script >
+         
+            var userNameBool = false
+            var numberBool = false
+            var emailBool = false
+            var passwordBool = false
+            var confirmPasswordBool = false
+        function setCookie(cookieName,cookieValue,daysToExpire) {
+                  var date = new Date();
+                  date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
+                  document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
+            }
+
+    function getCookie(cookieName) {
+                  var name = cookieName + "=";
+                  var allCookieArray = document.cookie.split(';');
+                      for(var i=0; i<allCookieArray.length; i++) {
+                            var temp = allCookieArray[i].trim();
+                            if (temp.indexOf(name)==0)
+                            return temp.substring(name.length,temp.length);
+                      }
+          return "";
+        }
+
+        function myCookie() {
+                    var userLength = getCookie('Total_User')
+                    if (userLength == null || userLength == "") {
+                    setCookie('Total_User',0,30)
+            }
+        }
+
+        //-------------------------------- Register A new User -----------------------------
+        
+        function createMyUser() {
+
+            if(userNameBool && numberBool && emailBool && passwordBool && confirmPasswordBool) 
+            {
+        
+                var userName = document.getElementById('myUser').value
+                var mobileNumber = document.getElementById('myMobileNumber').value
+                var emailID = document.getElementById('myEmailId').value
+                var password = document.getElementById('myPassword').value
+                
+                var userLength = getCookie('Total_User')
+                setCookie('User '+userLength, userName, 30)
+                setCookie('Mobile '+userLength, mobileNumber, 30)
+                setCookie('Email '+userLength, emailID, 30)
+                setCookie('Password '+userLength, password, 30)                
+                userLength = parseInt(userLength) + 1
+                setCookie('Total_User', userLength, 30)
+                return true;
+            }
+            else {  
+                alert("Please fill all fields correctly")
+                return false;
+            }
+        }
+
+
+        
+
+        //
+        //---------------------------- Username Validation ----------------------------
+        //
+
+        function checkUsername() {
+           var myRegexp = /^[a-zA-Z][a-zA-Z0-9_-]{5,}$/
+           if(myRegexp.test(document.getElementById('myUser').value)==false) {
+               alert("Name Must be greater then 6 character and not start from numbers")
+                userNameBool = false
+            }
+           else {
+                var length = getCookie('Total_User')
+                for(let i=0; i<=length; i++) {
+                    var username = getCookie('User '+i)
+                    var usernameTextField = document.getElementById('myUser').value
+                    if(usernameTextField == username)
+                    {
+                        alert('Username Already exists ')
+                        return;
+                    }
+                }
+                userNameBool = true
+           }
+        }
+        
+        //
+        //---------------------------- Mobile Number Validation ----------------------------
+        //
+
+        function checkMobileNumber() {
+            var myRegexp = /^[6-9]\d{9}$/
+            if(myRegexp.test(document.getElementById('myMobileNumber').value)==false) {
+               alert("Please Enter a valid Number")
+                numberBool = false
+           }
+           else {
+                var length = getCookie('Total_User')
+                for(let i=0; i<=length; i++) {
+                    var mobileNumber= getCookie('Mobile '+i)
+                    var mobileNumberTextField = document.getElementById('myMobileNumber').value
+                    if(mobileNumber == mobileNumberTextField)
+                    {
+                        alert('Mobile Number Already exists ')
+                        return;
+                    }
+                }
+                numberBool = true
+           }
+        }
+        
+        //
+        //---------------------------- EmailId Id Validation ----------------------------
+        //
+
+        function checkEmailId() {
+            var myRegexp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            if(myRegexp.test(document.getElementById('myEmailId').value)==false) {
+               alert("Please Enter a valid Email Id")
+                emailBool = false
+           }
+           else {
+                var length = getCookie('Total_User')
+                for(let i=0; i<=length; i++) {
+                    var emailID= getCookie('Email '+i)
+                    var emailIDTextField = document.getElementById('myEmailId').value
+                    if(emailID == emailIDTextField)
+                    {
+                        alert('Email Already exists ')
+                        return;
+                    }
+                }
+                emailBool = true
+           }
+        }
+        
+        //
+        //---------------------------- Password Validation ----------------------------
+        //
+
+        function checkPassword() {
+            var myRegexpStrong = /^.*(?=.{12,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/
+            var myRegexpMedium = /^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/
+            if(myRegexpStrong.test(document.getElementById('myPassword').value)==true) {
+                passwordBool = true
+            } else if(myRegexpMedium.test(document.getElementById('myPassword').value)==true) {
+                passwordBool = true
+            } else {
+                alert("Password must contain atleast one lowercase one uppercase one digit and one alphanumeric")
+                passwordBool = false
+            }
+        }
+        
+        //
+        //---------------------------- Confirm Password Validation ----------------------------
+        //
+
+        function checkConfirmPassword() {
+
+            var a = document.getElementById('myConfirmPassword').value
+            var b = document.getElementById('myPassword').value
+            if(document.getElementById('myConfirmPassword').value=="") {
+                alert("Enter Cofirm Password")
+                document.MyForm.focus();
+                confirmPasswordBool = false
+            }
+            else if(a==b) {
+                confirmPasswordBool = true
+            }
+            else {
+                alert("Password does not match")                
+                confirmPasswordBool = false
+            }
+        }
+
+  </script>
+            <table  id="BlackTable" width="100%" height="4%" >
+                    <tr>
+                     
+              
+                    </tr>
+                  </table >
+                  <div class="topnav">
+                      &nbsp&nbsp&nbsp&nbsp <font size="10" color="orange" style="font-family:cursive">MovieMania</font>
+                      <a onclick="document.getElementById('log').style.display='block'" ><div class="MenuBox" >Login</div></a>
+                      <a  onclick="document.getElementById('sign').style.display='block'"><div class="MenuBox" >Sign in</div></a>
+                    <a href="feedback.html"><div class="MenuBox">Feedback</div></a>
+                    <a href="movie.html"><div class="MenuBox">Movies</div></a>
+                    <a href="#"><div class="MenuBox">About</div></a>
+                    <a href="home.html"><div class="MenuBox">Home</div></a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                      <i class="fa fa-bars"></i>
+                    </a>
+                  </div>
+                    <table width="100%" height="4%" cellspacing="0" style="text-decoration: none" border="4" rules="none" id="BlackTable">
+                        <tr>
+                          <td>
+                            <font color="orange" size="4"><marquee>Online Movie Tickets Booking Website</marquee>
+                           </td>
+                          </tr>
+                      </table>
+                      <table id="BlackTable" width="100%" height="4%">
+                          <tr></tr>
+                      </table>
+        <div class="mydiv" style="max-width:2000px">
+            
+            
+            <img class="mySlides" src="D:\css mp\images\mania.jpg" style="width:100%">
+            <img class="mySlides" src="D:\css mp\images\seat.jpg" style="width:100%">
+            <img class="mySlides" src="D:\css mp\images\canteen.jpg" style="width:100%">
+            <img class="mySlides" src="D:\css mp\images\pvrlounge.jpg" style="width:100%">
+            <img class="mySlides" src="D:\css mp\images\pop.jpg" style="width:100%">
+            <img class="mySlides" src="D:\css mp\images\goldseat.jpg" style="width:100%">
+         
+          </div>
+      <div class="mydiv"> 
+                <b>ABOUT US</b>  
+                <br>   
+          &nbsp &nbsp  &nbsp<p class="info">
+                Movie Mania is an online movie ticket booking website where the user can book tickets, watch trailers of upcoming and latest movies,songs and mant more.
+
+          </p>
+          <p class="info">
+                Movie Mania offers a grand collection of cinema formats.Movie Mania is actually a (group)project made by Diploma students of Computer Department(3 rd Year) of M.H Saboo Siddik Polytechnic located in Byculla. It was fun making this website. It has home page,feedbackpage,login page,sign on page,ticket page,about page,etc.We used many languages like HTML,CSS,Javascript for developing this website.
+          </p>
+          <p class="info">
+                Here,are the names of the students who developed this website 1.Ansari Mehjabin,Ansari Raheen and Khwaja Arshi.
+                We added many pictures,movies in our wesite. User can view trailers of movies including hollywood,bollywood,telugu movies,marathi movies ,etc.User can also signin and login from here.One can also book tickets for desired movies.
+          </p><br>
+          <b>OUR TEAM</b>
+          <br>
+          
+          <div class="mydiv2">
+              <img class="about" onmouseover="bigImg(this)" onmouseout="normalImg(this)"src ="D:\css mp\images\team1.png "> <br>
+                <div class="name">Steve Nash </div>
+                 
+        </div>
+        <div class="mydiv2" >
+                <img class="about" onmouseover= "bigImg(this)" onmouseout="normalImg(this)"src="D:\css mp\images\team2.png"> 
+                <div class="name">Olivia Marie</div> 
+                
+            </div>
+      
+        <div class="mydiv2" >
+                <img class="about" onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="D:\css mp\images\team3.jpg ">
+                <div class="name">Dale Buzby</div>
+            </div>
+
+
+            <div class="mydiv2" >
+                    <img class="about" onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="D:\css mp\images\team4.jpg">
+                    <div class="name">Parker Kate</div>
+                </div>
+
+
+            <div class="mydiv2" >
+                    <img class="about" onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="D:\css mp\images\team5.png "> 
+                    <div class="name">John Doe</div>
+                    <br>
+                   
+             </div>  
+
+
+             <div class="mydiv2" >
+                    <img class="about" onmouseover="bigImg(this)" onmouseout="normalImg(this)"src="D:\css mp\images\team6.jpg">
+                    <div class="name">John Marsh</div> 
+                   
+             </div>  
+           
+   
+        </div></div></div></div>
+    <br><br>
+    
+        <div class="newdiv">
+          &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp &nbsp  &nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp DO YOU LIKED OUR WEBSITE?&nbsp<i onclick="myFunction(this)" class="fa fa-thumbs-up"></i>
+        </div>
+    
+                     
+
+<table width="100%" cellspacing="45" cellpadding="9" id="BlackTable" class="footerTable">
+        <tr>
+          <td>
+            <font color="#fffbef" size="4"><b>About Movie Mania</b></font><br><br>
+            <font color="#666">Movie Mania is an online movie tickets <br>booking website where user can book tickets,<br>watch trailers of upcoming and latest movies<br>and many more. </font>
+            </td>
+          <td>
+       <font color="#fffbef" size="4"><b>Contact Us</b></font><br><br>
+       <font color="#666">Call us toll free:</font><br><br>
+        <font color="#666" size="6"> 1 8 0 0 3 8 2 9 1 6 </font>
+          </td>
+          <td>
+             <font color="#fffbef" size="4"><b>Quick Links</b></font><br><br>
+              <a href="home.html"><font color="#666">Home</a><br>
+              <a href="#"><font color="#666">About Us</a><br>
+              <a href="movie.html"><font color="#666">Movies</a><br>
+              <a href="feedback.html"><font color="#666">Feedback</a><br>
+              </td><td></td>
+              <td>
+                  <font color="#fffbef" size="4"><b>Follow us on:<br></font><br><br>
+                  <a href="https://www.instagram.com/arshi_khwaja_/" target="_blank" bgcolor="rgba(26,26,26,0.9)"><img src="D:\css mp\images\instagram.png" width="30px" height="30px" ></a>&nbsp&nbsp
+                  <a href="https://in.pinterest.com/ansariraheen26/" target="_blank" bgcolor="rgba(26,26,26,0.9)"><img src="D:\css mp\images\pinterest.png" width="30px" height="30px" ></a>&nbsp&nbsp
+                  <a href="https://www.facebook.com/ETAMovie/" target="_blank" bgcolor="rgba(26,26,26,0.9)"><img src="D:\css mp\images\facebook.png" width="30px" height="30px" ></a>&nbsp&nbsp
+                 
+                  <br><br>
+                 <font color="#fffbef" size="4"><b>Movie Mania<br></font><br>
+                  <font color="#666">Stay updated with latest <br>hollywood and bollywood movies<br><br></font>
+              </td>
+            </table>
+        </table>
+        <table bgcolor="#111" height="70px" width="100%">
+          <tr>
+          </tr>
+           <tr>
+             <td>
+
+             </td>
+                <td>
+              <center><font color="orange" size="4">&copy;MovieMania 2019.All Rights Reserved</font></center>
+                </td>
+            </tr>
+            <tr>
+            </tr>
+          </table>
+        <script>
+            
+                var myIndex = 0;
+                pvr();
+                
+                function pvr() {
+                  var i;
+                  var x = document.getElementsByClassName("mySlides");
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                  }
+                  myIndex++;
+                  if (myIndex > x.length) {myIndex = 1}    
+                  x[myIndex-1].style.display = "block";  
+                  setTimeout(pvr, 2000); // Change image every 2 seconds
+
+                  
+
+
+                }
+                
+                function bigImg(x) {
+                x.style.height = "300";
+                x.style.width = "310";
+                
+                }
+
+                function normalImg(x) {
+                 x.style.height = "240";
+                 x.style.width = "300";
+                 
+                }
+
+                function myFunction(x) {
+  x.classList.toggle("fa-thumbs-down");
+}
+
+
+
+               
+              </script>
+         
+        
+
+         <div id="sign" class="modal2">
+          <form name="signup"  class="modal-content2">
+            <div class="container2">
+              <h1 class="size">Sign Up</h1>
+        
+        <span class="close-signup" onclick="document.getElementById('sign').style.display='none'">X</span>
+        
+            
+              <hr>
+              <label for="Name" class="fntcolor"><b><font color="black">Name</font></b></label>
+              <input type="text" placeholder="Enter Name" id="myUser" onblur="checkUsername()">
+        
+              <label for="email" class="fntcolor"><b><font color="black">Email ID</font></b></label>
+              <input type="text" placeholder="Enter Email" id="myEmailId" onblur="checkEmailId()">
+        
+              <label for="psw" class="fntcolor"><b><font color="black">Password</font> </b></label>
+              <input type="password" placeholder="Enter Password" size="8" id="myPassword" onblur="checkPassword()">
+        
+              <label for="cpass" class="fntcolor"><b><font color="black">Confirm Password</font></b></label>
+              <input type="password" placeholder="Confirm Password" size="8" id="myConfirmPassword" onblur="checkConfirmPassword()">
+        
+              <label for="phone No." class="fntcolor"><b><font color="black">Phone No</font></b></label>
+              <input type="text" placeholder="Enter Phone No." id="myMobileNumber" size="10" onblur="checkMobileNumber()">
+        
+              <div class="clearfix">
+                <input type="button" value="Cancel" onclick="document.getElementById('sign').style.display='none'" class="cancelbtn"></b>
+                <a href="home.html"><input type="button" class="signupbtn" value="Sign Up" onclick="return createMyUser();"></a>
+              </div>
+            </div>
+          </form>
+        </div>
+        
+        
+        <div id="log" class="modal2">
+          <form name="login"  class="modal-content2">
+                <div class="container2">
+                  <h1 class="size">Login</h1>
+                  <span class="close-signup" onclick="document.getElementById('log').style.display='none'">X</span>
+                  <hr>
+            
+                  <label for="username" class="fntcolor"><b><font color="black">Username</font></b></label>
+                  <input type="text" placeholder="Enter Username" id="myUserReg" >
+            
+                  <label for="lpass" class="fntcolor"><b><font color="black">Password</font> </b></label>
+                  <input type="password" placeholder="Enter Password" size="8" id="myPassReg" >
+            
+                  <div class="clearfix">
+                  <input type="button" value="Cancel" onclick="document.getElementById('log').style.display='none'" class="cancelbtn">
+                           <input type="submit" class="logbtn" value="Login" onclick ="return LoginUser()"><br>
+                  <a onclick="document.getElementById('sign').style.display='block'"><div class="fntcolor" >Dont have an account ?</div></a>
+                  </div>
+                </div>
+             </form>
+        </div>
+        
+        <script>
+        // Get the modal
+        var modal = document.getElementById('sign');
+        var modal = document.getElementById('log');
+        </script>
+        
+        <!--//////////////////             For Login            ///////////////////////////-->
+         
+    </body>
+</html>

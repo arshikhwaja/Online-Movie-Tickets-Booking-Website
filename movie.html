@@ -1,0 +1,1375 @@
+<html>
+    <style>
+           * {box-sizing: border-box}
+                    body {font-family: Verdana, sans-serif; margin:0}
+                    .mySlides {display: none}
+                    
+                    
+                    #BlackTable{
+                      display: inline-flexbox;
+                      margin: 0px;
+                      background-color:rgba(26,26,26,0.9);
+                      font-family: 'Times New Roman', Times, serif;
+                     }
+                  .footerTable{
+                    border-top-style: dashed;
+                    border-bottom-style: dashed;
+                    border-width: 5px;
+                    color: #C4AE83;
+                  }
+                    hr{
+                      background-color:rgba(26,26,26,0.9);
+                      
+                    }
+                    .topnav {
+                    overflow: hidden;
+                    background: rgba(26,26,26,0.9);
+                  }
+
+                  .topnav a {
+                    float: right;
+                    display: block;
+                    color: #f2f2f2;
+                    text-align: center;
+                    padding: 14px 16px;
+                    border-radius: 40px;
+                    text-decoration: none;
+                    font-size: 17px;
+                    box-shadow: #ddd;
+                  }
+                  .topnav a:hover {
+                    background-color: rgba(26,26,26,0.8);
+                    color: white;
+                    -ms-transform: scale(0.9);
+                    -webkit-transform: scale(0.9);
+                    transform: scale(0.9);
+                    transition: transform .2s;
+                    
+                  }
+                  .topnav a.active {
+                    background-color: orange;
+                    color: white;
+                  }
+
+                  .topnav .icon {
+                    display: none;
+                  }
+
+                  @media screen and (max-width: 600px) {
+                    .topnav a:not(:first-child) {display: none;}
+                    .topnav a.icon {
+                      float: left;
+                      display: block;
+                    }
+                  }
+
+                  @media screen and (max-width: 600px) {
+                    .topnav.responsive 
+                  {position: relative;}
+                    .topnav.responsive .icon {
+                      position: absolute;
+                      right: 0;
+                      top: 0;
+                    }
+                    .topnav.responsive a {
+                      float: none;
+                      display: block;
+                      text-align: left;
+                    }
+                  }
+                  .MenuBox{
+                    background-color:	#696969; 
+                    border-style: outset;
+                    box-shadow: 1px 1px 11px dimgray;
+                    border-color: #666; 
+                    background: transparent;
+                    color: white;
+                    padding: 10px 10px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: block;
+                    font-size: 18px;
+                    margin: 4px 2px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                  }
+                  .main-div{
+                      padding: 50px;
+                      max-width: 2000px;
+                      
+                      
+                  }
+                
+                 h4 {
+                   color: black;
+                  }
+                .faltu h1{
+                    color:orange !important;
+                    width: 100%;
+                    height:6%;
+                    background: rgba(26, 26, 26,0.8);                    
+                  }
+                  
+                  .i{
+                    width: 100%;
+                    height: 85%;
+                    border: 5px solid black;
+                    opacity: 1;
+                    display: block;
+                    
+                  }
+
+                  .single{
+                    width: 400px;
+                    height: 85%;
+                    padding: 35px;
+                    float: left;
+                    margin: 5px;
+                    position: relative;
+                   
+                  }
+                  .middle {
+  
+                  opacity: 0;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  text-align: center;
+                  } 
+                  .single:hover .i{
+                  opacity: 0.5;
+                  }
+
+                  .single:hover .middle {
+                  opacity: 1;
+                  }
+
+                  div.single:hover {
+                    border: 1px solid #777;
+                  }
+                  i:hover{
+                    color: lightgray;
+                  }
+                  .text {
+                  background-color: rgba(26, 26, 26);
+                  color: white;
+                  font-size: 16px;
+                  padding: 16px 32px;
+                  }
+                  .MenBox{
+                    background-color:	#696969; 
+                    border-style: outset;
+                    border-color: #666; 
+                    background: transparent;
+                    color: white;
+                    padding: 10px 10px;
+                    text-align: center;
+                    
+                    display: block;
+                    font-size: 18px;
+                    margin: 4px 2px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    widows: 5px;
+
+                  }
+                  .MenBox:hover{
+                    background-color: rgb(226, 224, 224);
+                  }
+            
+        /* The Modal (background) */
+        
+        .modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(26, 26, 26, 0.5);
+            padding-top: 0%;
+           
+        }
+
+        .container input {
+            border: 1px solid gray;
+        }
+        
+        .container h1 {
+            margin: 0%;
+            display: inline-block;
+
+        }
+        .container{
+          position: fixed;
+          top: 15%;
+          left: 25%;
+          height: 80%;
+          width: 50%;
+          float: left;
+          border-radius: 10px;
+          background-color: lightgray;
+          
+        
+        }
+        
+        .close-ticket{
+          display: inline-block;
+        	float: right;
+	        font-size: 25px;
+	        cursor: pointer;
+        }
+        .close-ticket:hover {
+        	color: red;
+        }
+        h2{
+          color: aqua;
+          size: 100%;
+        }
+        div.screen{
+          height: 25px;
+          width:  85%;
+          color:white;
+          background-color:orange;
+          margin-left: 6%;
+          float: left;
+        }
+        .booknow{
+
+            float: right;
+            width: 40%;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+       
+        .booknow {
+            padding: 14px 20px;
+            background-color: orange;
+            border: 5px solid darkgray;
+        }
+
+        }
+       .seat{
+          max-height: 100px;
+          max-width: 300px;
+          background-color: #A9A9A9;
+        }
+       
+        .line{
+          max-width: 100%;
+          max-height: 60%;
+          
+          float:right;
+          position: absolute;
+          left: 52%;
+          margin-left: -0.0px;
+          margin-top: 0px;
+          margin-bottom: 1000px;
+
+        }
+        .total{
+          float: right;
+          
+          margin-right:20%;
+        }
+
+
+
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0px 22px 0;
+            background: #f1f1f1;
+            
+        }
+    
+        
+        
+        .container1 {
+            padding: 20px;
+            background-color: lightgray;
+            margin: 7% auto 15% auto;
+            width: 30%;
+            height:auto;
+            border-radius: 30px;
+            
+
+            
+        }
+        /* The Modal (background) */
+        
+        .modal1 {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            /*overflow: auto; Enable scroll if needed */
+            background-color: rgba(26, 26, 26, 0.5);
+            padding-top: 0%;
+            /*border: 5px solid darkgray;*/
+        }
+        /* Style the horizontal ruler */
+        
+        hr {
+            border: 3px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+        
+        .container1 input {
+            border: 1px solid gray;
+            
+            
+            
+        }
+
+        
+        /* Clear floats */
+        
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        
+        .close-c {
+            display: inline-block;
+            float: right;
+            font-size: 20px;
+            cursor: pointer;
+            
+            
+        }
+        h1{
+          color: orange;
+        }
+        .close-c:hover {
+            color: red;
+        }
+        
+       
+
+
+    .color{
+        color: black;
+    }
+
+    .cancelbtn {
+            padding: 14px 20px;
+            background-color: orange;
+            border: 5px solid darkgray;
+        }
+
+        .cancelbtn,
+        .subbtn {
+            float: left;
+            width: 50%;
+            border-radius: 10px;
+        }
+
+       
+        .subbtn {
+            padding: 14px 20px;
+            background-color: rgb(107, 238, 107);
+            border: 5px solid darkgray;
+        }
+
+        .subbtn:hover{
+            background-color: green;
+        }
+
+        .cancelbtn:hover{
+            background-color: yellow;
+        }
+
+
+
+ /*Full-width input fields */
+
+ input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0px 22px 0;
+  background: #f1f1f1;
+}
+
+/* Set a style for all buttons */
+
+
+
+/* Extra styles for the cancel button */
+
+.cancelbtn1 {
+  padding: 14px 20px;
+  background-color: #f44336;
+  border: 5px solid darkgray;
+}
+.signupbtn1,.logbtn1{
+  padding: 14px 20px;
+  background-color: rgb(24, 185, 24);
+  border: 5px solid darkgray;
+  float: right; 
+  }
+
+.signupbtn1:hover {
+	background-color: rgb(83, 233, 83);
+}
+
+.logbtn1:hover {
+	background-color: rgb(5, 172, 5);
+}
+
+.cancelbtn1:hover {
+	background-color:red;
+}
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn1, .signupbtn1,.logbtn1 {
+  
+  width: 49%;
+  border-radius: 10px;
+}
+
+/* Add padding to container elements */
+.container2 {
+  padding: 16px;
+  background-color: rgba(26,26,26,0.4);
+  border-radius: 30px;
+}
+
+/* The Modal (background) */
+.modal2 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  /*overflow: auto; Enable scroll if needed */
+  background-color: rgba(26, 26, 26, 0.5);
+  padding-top: 0%;
+  /*border: 5px solid darkgray;*/
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.container2 input {
+	border: 1px solid gray;
+}
+
+.modal-content2 {
+  background-color: white;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 25%; /* Could be more or less, depending on screen size */
+  border-radius: 30px;
+  border-style: outset;
+  border-color:5px solid gray;
+  
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.close-signup {
+	display: inline-block;
+	float: right;
+	font-size: 20px;
+	cursor: pointer;
+}
+.close-signup:hover {
+	color: red;
+}
+
+.container2 h1 {
+	margin : 0%;
+	display: inline-block;
+  
+  color: black;
+}
+ 
+
+
+
+
+
+
+    </style>
+                
+                  
+
+  
+    <head>
+        <title>
+            movie
+        </title>
+    </head>
+    <body onload="myCookie()">
+
+
+
+        <script type="text/javascript">
+  
+          function getCookie(cookieName)
+                  {
+                      var name = cookieName + "=";
+                      var allCookieArray = document.cookie.split(';');
+                        for(var i=0; i<allCookieArray.length; i++)
+                          {
+                            var temp = allCookieArray[i].trim();
+                            if (temp.indexOf(name)==0)
+                            return temp.substring(name.length,temp.length);
+                   }
+                  return "";
+              }
+  
+  
+          function LoginUser() {
+            var length = getCookie('Total_User')
+                  for(let i=0; i<=length; i++) {
+                     var username = document.getElementById('myUserReg').value
+                     var password = document.getElementById('myPassReg').value
+                     var user = getCookie('User '+i)
+                     var pass = getCookie('Password '+i)
+                   if(username == user)
+                       {
+                          if(password == pass)
+                              {
+                                  alert("Welcome back "+username)
+                                  return true;
+                          }
+                              else
+                              {
+                                  alert("wrong Password")
+                                  return false;
+                          }
+                 }
+                }
+              alert("username does not exist")
+              return false;
+        }
+  
+  
+        </script>
+  
+  
+  
+  
+        
+        
+  <!--//////////////////             For Registration            ///////////////////////////-->   
+  
+  
+        <script >
+           
+              var userNameBool = false
+              var numberBool = false
+              var emailBool = false
+              var passwordBool = false
+              var confirmPasswordBool = false
+          function setCookie(cookieName,cookieValue,daysToExpire) {
+                    var date = new Date();
+                    date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
+                    document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
+              }
+  
+      function getCookie(cookieName) {
+                    var name = cookieName + "=";
+                    var allCookieArray = document.cookie.split(';');
+                        for(var i=0; i<allCookieArray.length; i++) {
+                              var temp = allCookieArray[i].trim();
+                              if (temp.indexOf(name)==0)
+                              return temp.substring(name.length,temp.length);
+                        }
+            return "";
+          }
+  
+          function myCookie() {
+                      var userLength = getCookie('Total_User')
+                      if (userLength == null || userLength == "") {
+                      setCookie('Total_User',0,30)
+              }
+          }
+  
+          //-------------------------------- Register A new User -----------------------------
+          
+          function createMyUser() {
+  
+              if(userNameBool && numberBool && emailBool && passwordBool && confirmPasswordBool) 
+              {
+          
+                  var userName = document.getElementById('myUser').value
+                  var mobileNumber = document.getElementById('myMobileNumber').value
+                  var emailID = document.getElementById('myEmailId').value
+                  var password = document.getElementById('myPassword').value
+                  
+                  var userLength = getCookie('Total_User')
+                  setCookie('User '+userLength, userName, 30)
+                  setCookie('Mobile '+userLength, mobileNumber, 30)
+                  setCookie('Email '+userLength, emailID, 30)
+                  setCookie('Password '+userLength, password, 30)                
+                  userLength = parseInt(userLength) + 1
+                  setCookie('Total_User', userLength, 30)
+                  return true;
+              }
+              else {  
+                  alert("Please fill all fields correctly")
+                  return false;
+              }
+          }
+  
+  
+          
+  
+          //
+          //---------------------------- Username Validation ----------------------------
+          //
+  
+          function checkUsername() {
+             var myRegexp = /^[a-zA-Z][a-zA-Z0-9_-]{5,}$/
+             if(myRegexp.test(document.getElementById('myUser').value)==false) {
+                 alert("Name Must be greater then 6 character and not start from numbers")
+                  userNameBool = false
+              }
+             else {
+                  var length = getCookie('Total_User')
+                  for(let i=0; i<=length; i++) {
+                      var username = getCookie('User '+i)
+                      var usernameTextField = document.getElementById('myUser').value
+                      if(usernameTextField == username)
+                      {
+                          alert('Username Already exists ')
+                          return;
+                      }
+                  }
+                  userNameBool = true
+             }
+          }
+          
+          //
+          //---------------------------- Mobile Number Validation ----------------------------
+          //
+  
+          function checkMobileNumber() {
+              var myRegexp = /^[6-9]\d{9}$/
+              if(myRegexp.test(document.getElementById('myMobileNumber').value)==false) {
+                 alert("Please Enter a valid Number")
+                  numberBool = false
+             }
+             else {
+                  var length = getCookie('Total_User')
+                  for(let i=0; i<=length; i++) {
+                      var mobileNumber= getCookie('Mobile '+i)
+                      var mobileNumberTextField = document.getElementById('myMobileNumber').value
+                      if(mobileNumber == mobileNumberTextField)
+                      {
+                          alert('Mobile Number Already exists ')
+                          return;
+                      }
+                  }
+                  numberBool = true
+             }
+          }
+          
+          //
+          //---------------------------- EmailId Id Validation ----------------------------
+          //
+  
+          function checkEmailId() {
+              var myRegexp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+              if(myRegexp.test(document.getElementById('myEmailId').value)==false) {
+                 alert("Please Enter a valid Email Id")
+                  emailBool = false
+             }
+             else {
+                  var length = getCookie('Total_User')
+                  for(let i=0; i<=length; i++) {
+                      var emailID= getCookie('Email '+i)
+                      var emailIDTextField = document.getElementById('myEmailId').value
+                      if(emailID == emailIDTextField)
+                      {
+                          alert('Email Already exists ')
+                          return;
+                      }
+                  }
+                  emailBool = true
+             }
+          }
+          
+          //
+          //---------------------------- Password Validation ----------------------------
+          //
+  
+          function checkPassword() {
+              var myRegexpStrong = /^.*(?=.{12,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/
+              var myRegexpMedium = /^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/
+              if(myRegexpStrong.test(document.getElementById('myPassword').value)==true) {
+                  passwordBool = true
+              } else if(myRegexpMedium.test(document.getElementById('myPassword').value)==true) {
+                  passwordBool = true
+              } else {
+                  alert("Password must contain atleast one lowercase one uppercase one digit and one alphanumeric")
+                  passwordBool = false
+              }
+          }
+          
+          //
+          //---------------------------- Confirm Password Validation ----------------------------
+          //
+  
+          function checkConfirmPassword() {
+  
+              var a = document.getElementById('myConfirmPassword').value
+              var b = document.getElementById('myPassword').value
+              if(document.getElementById('myConfirmPassword').value=="") {
+                  alert("Enter Cofirm Password")
+                  document.MyForm.focus();
+                  confirmPasswordBool = false
+              }
+              else if(a==b) {
+                  confirmPasswordBool = true
+              }
+              else {
+                  alert("Password does not match")                
+                  confirmPasswordBool = false
+              }
+          }
+  
+    </script>
+
+
+
+     
+
+      <table  id="BlackTable" width="100%" height="4%" >
+        <tr>
+         
+  
+        </tr>
+      </table >
+      <div class="topnav">
+       <font size="10" color="orange" style="font-family:cursive">MovieMania</font>
+       <a onclick="document.getElementById('log').style.display='block'" ><div class="MenuBox" >Login</div></a>
+       <a  onclick="document.getElementById('sign').style.display='block'"><div class="MenuBox" >Sign in</div></a>
+        <a href="feedback.html"><div class="MenuBox">Feedback</div></a>
+        <a href="movie.html"><div class="MenuBox">Movies</div></a>
+        <a href="about.html"><div class="MenuBox">About</div></a>
+        <a href="home.html"><div class="MenuBox">Home</div></a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+        <table width="100%" height="4%" cellspacing="0" style="text-decoration: none" border="4" rules="none" id="BlackTable">
+            <tr>
+              <td>
+                <font color="orange" size="4"><marquee>Online Movie Tickets Booking Website</marquee>
+               </td>
+              </tr>
+          </table>
+          <table id="BlackTable" width="100%" height="4%">
+              <tr></tr>
+          </table>
+      
+              <div class=faltu>
+                <center><h1>Movies</h1></center>
+                <div class="main-div">
+                      <div class="single">
+                          <img src="D:\css mp\images\dreamgirl.jpg" class="i" alt>
+                        <a href="https://www.youtube.com/watch?v=nf39Jpi3ZQ4">
+                          <div class="middle">
+                              <div class="text">Dreamgirl</div>
+                            </div>
+                        </a>
+                        <h4>
+                          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <img src="D:\css mp\images\hrt.jpg" height="20" width="20" alt>84%
+                          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|Hindi|<a onclick="document.getElementById('ticket').style.display='block'"><div class="MenBox" id="book"><font color="black">Book Ticket</font></div></a> 
+                        </h4>
+                      </div>
+
+                      <div class=single>
+                          <img src="D:\css mp\images\bharat.jpg" class="i"  alt >
+                          <a href="https://www.youtube.com/watch?v=Ea_GKoe81GY">
+                            <div class="middle">
+                                <div class="text">Bharat</div>
+                              </div>
+                          </a>
+                          <h4>
+                              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="D:\css mp\images\hrt.jpg" height="20" width="20" alt>86%
+                              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp |Hindi| <a onclick="document.getElementById('ticket').style.display='block'"><div class="MenBox"><font color="black">Book Ticket</font></div></a>
+                          </h4>
+                      </div>
+
+                      <div class=single>
+                          <img src="D:\css mp\images\pal.jpg" class="i"  alt >
+                        <a href="https://www.youtube.com/watch?v=1XW49GYRtJ0">
+                          <div class="middle">
+                              <div class="text">Pal pal dil ke pass</div>
+                            </div>
+                        </a>
+                        <h4>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="D:\css mp\images\hrt.jpg" height="20" width="20" alt>73%
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|Hindi| <a onclick="document.getElementById('ticket').style.display='block'"><div class="MenBox"><font color="black">Book Ticket</font></div></a> 
+                        </h4>
+                    </div>
+
+                    <div class="single">
+                        <img src="D:\css mp\images\chhichhore.jpg" class="i" alt>
+                      <a href="https://www.youtube.com/watch?v=tsxemFX0a7k">
+                        <div class="middle">
+                            <div class="text">Chhichhore</div>
+                          </div>
+                      </a>
+                      <h4>
+                          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <img src="D:\css mp\images\hrt.jpg" height="20" width="20" alt>88%
+                          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp |Hindi| <a onclick="document.getElementById('ticket').style.display='block'"><div class="MenBox"><font color="black">Book Ticket</font></div></a> 
+                      </h4>
+                    </div>
+
+                    <div class=single>
+                        <img src="D:\css mp\images\war.jpg" class="i"  alt >
+                        <a href="https://www.youtube.com/watch?v=tQ0mzXRk-oM">
+                          <div class="middle">
+                              <div class="text">War</div>
+                            </div>
+                        </a>
+                        <h4>
+                          &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="D:\css mp\images\hrt.jpg" height="20" width="20" alt>70%
+                          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp |Hindi| <a onclick="document.getElementById('ticket').style.display='block'"><div class="MenBox"><font color="black">Book Ticket</font></div></a>
+                        </h4>
+                    </div>
+
+                    <div class=single>
+                        <img src="D:\css mp\images\prasthaanam.jpg" class="i"  alt >
+                      <a href="https://www.youtube.com/watch?v=Sy_iSfLlM20">
+                        <div class="middle">
+                            <div class="text">Prassthaanam</div>
+                          </div>
+                      </a>
+                      <h4>
+                          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="D:\css mp\images\hrt.jpg" height="20" width="20" alt>72%
+                          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|Hindi| <a onclick="document.getElementById('ticket').style.display='block'"><div class="MenBox"><font color="black">Book Ticket</font></div></a>
+                      </h4>
+                  </div>
+
+                  <div class="single">
+                      <img src="D:\css mp\images\abominable.jpg" class="i" alt>
+                    <a href="https://www.youtube.com/watch?v=Ap0NRJD-2ts">
+                      <div class="middle">
+                          <div class="text">Abominable</div>
+                        </div>
+                    </a>
+                    <h4>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="D:\css mp\images\hrt.jpg" height="20" width="20" alt>79%
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|English| <a onclick="document.getElementById('ticket').style.display='block'"><div class="MenBox"><font color="black">Book Ticket</font></div></a>
+                    </h4>
+                  </div>
+
+                  <div class=single>
+                      <img src="D:\css mp\images\avengers.jpg" class="i" alt >
+                      <a href="https://www.youtube.com/watch?v=TcMBFSGVi1c">
+                        <div class="middle">
+                            <div class="text">Avengers</div>
+                          </div>
+                      </a>
+                      <h4>
+                          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="D:\css mp\images\hrt.jpg" height="20" width="20" alt>84%
+                          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp |English| <a onclick="document.getElementById('ticket').style.display='block'"><div class="MenBox"><font color="black">Book Ticket</font></div></a>
+                      </h4>
+                  </div>
+
+                  <div class=single>
+                      <img src="D:\css mp\images\joker.jpg" class="i" alt >
+                    <a href="https://www.youtube.com/watch?v=-_DJEzZk2pc">
+                      <div class="middle">
+                          <div class="text">joker</div>
+                        </div>
+                    </a>
+                    </a>
+                    <h4>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="D:\css mp\images\hrt.jpg" height="20" width="20" alt>79%
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|English| <a onclick="document.getElementById('ticket').style.display='block'"><div class="MenBox"><font color="black">Book Ticket</font></div></a>
+                    </h4>
+                </div>
+
+                <div class="single">
+                    <img src="D:\css mp\images\angrybirds.jpg" class="i" alt>
+                  <a href="https://www.youtube.com/watch?v=xCglV_dqFGI">
+                    <div class="middle">
+                        <div class="text">Angrybirds</div>
+                      </div>
+                  </a>
+                  <h4>
+                      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="D:\css mp\images\hrt.jpg" height="20" width="20" alt>83%
+                      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|English| <a onclick="document.getElementById('ticket').style.display='block'"><div class="MenBox"><font color="black">Book Ticket</font></div></a>
+                  </h4>
+                </div>
+
+                <div class=single>
+                    <img src="D:\css mp\images\corgi.jpg" class="i"  alt >
+                    <a href="https://www.youtube.com/watch?v=sbrEmlTJd7E">
+                     <div class="middle">
+                        <div class="text">The Queen Corgi</div>
+                      </div>
+                    </a>
+                    <h4>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="D:\css mp\images\hrt.jpg" height="20" width="20" alt>72%
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp |English| <a onclick="document.getElementById('ticket').style.display='block'"><div class="MenBox"><font color="black">Book Ticket</font></div></a>
+                    </h4>
+                </div>
+
+                <div class=single>
+                    <img src="D:\css mp\images\dora.jpg" class="i" alt >
+                  <a href="https://www.youtube.com/watch?v=gUTtJjV852c">
+                    <div class="middle">
+                        <div class="text">Dora and the lost city of gold</div>
+                      </div>
+                  </a>
+                  <h4>
+                      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="D:\css mp\images\hrt.jpg" height="20" width="20" alt>77%
+                      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp |English|
+                    <a onclick="document.getElementById('ticket').style.display='block'"><div class="MenBox"><font color="black">Book Ticket</font></div></a>
+                  </h4>
+              </div>
+
+              <div class="single">
+                  <img src="D:\css mp\images\gf.jpg" class="i" alt>
+                <a href="https://www.youtube.com/watch?v=EB6Py6mnJ7k">
+                 
+                 <div class="middle">
+                    <div class="text">Girlfriend</div>
+                  </div>
+                </a>
+                <h4>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="D:\css mp\images\hrt.jpg" height="20" width="20" alt>60%
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|Marathi| <a onclick="document.getElementById('ticket').style.display='block'"><div class="MenBox"><font color="black">Book Ticket</font></div></a>
+                </h4>
+              </div>
+
+              <div class=single>
+                  <img src="D:\css mp\images\balance.jpg" class="i" alt >
+                  <a href="https://www.youtube.com/watch?v=6TDRub960V4">
+                   <div class="middle">
+                      <div class="text">Balance</div>
+                    </div>
+                  </a>
+                  <h4>
+                      &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="D:\css mp\images\hrt.jpg" height="20" width="20" alt>72%
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|Marathi| <a onclick="document.getElementById('ticket').style.display='block'"><div class="MenBox"><font color="black">Book Ticket</font></div></a>
+                  </h4>
+              </div>
+
+              <div class=single>
+                  <img src="D:\css mp\images\khari.jpg" class="i"  alt >
+                <a href="https://www.youtube.com/watch?v=6wSLfO3z6U8">
+                
+                 <div class="middle">
+                    <div class="text">khari Buiskit</div>
+                  </div>
+                </a>
+                <h4>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="D:\css mp\images\hrt.jpg" height="20" width="20" alt>84%
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp |Marathi| <a onclick="document.getElementById('ticket').style.display='block'"><div class="MenBox"><font color="black">Book Ticket</font></div></a>
+                </h4>
+            </div>
+
+            <div class="single">
+                <img src="D:\css mp\images\palshichi.jpg" class="i" alt>
+              <a href="https://www.youtube.com/embed/wfxTu093gBE">
+               
+               <div class="middle">
+                  <div class="text">Palshichi PT</div>
+                </div>
+              </a>
+              <h4>
+                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="D:\css mp\images\hrt.jpg" height="20" width="20" alt>79%
+                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|Marathi| <a onclick="document.getElementById('ticket').style.display='block'"><div class="MenBox"><font color="black">Book Ticket</font></div></a>
+              </h4>
+            </div>
+
+            <div class=single>
+                <img src="D:\css mp\images\sur.jpg" class="i"  alt >
+                <a href="https://www.youtube.com/watch?v=5ipKb2f50OE">
+                 
+                 <div class="middle">
+                    <div class="text">Sur Sapata</div>
+                  </div>
+                </a>
+                <h4>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="D:\css mp\images\hrt.jpg" height="20" width="20" alt>69%
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp |Marathi| <a onclick="document.getElementById('ticket').style.display='block'"><div class="MenBox"><font color="black">Book Ticket</font></div></a>
+                </h4>
+            </div>
+
+            <div class=single>
+                <img src="D:\css mp\images\kaagar.jpg" class="i"  alt >
+              <a href="https://www.youtube.com/watch?v=vJpifFgZvBc">
+               
+               <div class="middle">
+                  <div class="text">Kaager</div>
+                </div>
+              </a>
+              <h4>
+                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<img src="D:\css mp\images\hrt.jpg" height="20" width="20" alt>64%
+                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp|Marathi| <a onclick="document.getElementById('ticket').style.display='block'"><div class="MenBox"><font color="black">Book Ticket</font></div></a>
+              </h4>
+          </div>
+                
+                </div>
+              </div>
+                <table width="100%" height="5%">
+                    <tr>
+                     
+              
+                    </tr>
+                  </table >
+                
+                <table width="100%" cellspacing="45" cellpadding="9" id="BlackTable" class="footerTable">
+                  <tr>
+                    <td>
+                      <font color="#fffbef" size="4"><b>About Movie Mania</b></font><br><br>
+                      <font color="#666">Movie Mania is an online movie tickets <br>booking website where user can book tickets,<br>watch trailers of upcoming and latest movies<br>and many more. </font>
+                      </td>
+                    <td>
+                 <font color="#fffbef" size="4"><b>Contact Us</b></font><br><br>
+                 <font color="#666">Call us toll free:</font><br><br>
+                  <font color="#666" size="6"> 1 8 0 0 3 8 2 9 1 6 </font>
+                    </td>
+                    <td>
+                       <font color="#fffbef" size="4"><b>Quick Links</b></font><br><br>
+                        <a href="home.html"><font color="#666">Home</a><br>
+                        <a href="about.html"><font color="#666">About Us</a><br>
+                        <a href="#"><font color="#666">Movies</a><br>
+                        <a href="feedback.html"><font color="#666">Feedback</a><br>
+                    </td><td></td>
+                    <td>
+                        <font color="#fffbef" size="4"><b>Follow us on:<br></font><br><br>
+                        <a href="https://www.instagram.com/arshi_khwaja_/" target="_blank" bgcolor="rgba(26,26,26,0.9)"><img src="D:\css mp\images\instagram.png" width="30px" height="30px" ></a>&nbsp&nbsp
+                        <a href="https://in.pinterest.com/ansariraheen26/" target="_blank" bgcolor="rgba(26,26,26,0.9)"><img src="D:\css mp\images\pinterest.png" width="30px" height="30px" ></a>&nbsp&nbsp
+                        <a href="https://www.facebook.com/ETAMovie/" target="_blank" bgcolor="rgba(26,26,26,0.9)"><img src="D:\css mp\images\facebook.png" width="30px" height="30px" ></a>&nbsp&nbsp
+                       
+                        <br><br>
+                       <font color="#fffbef" size="4"><b>Movie Mania<br></font><br>
+                        <font color="#666">Stay updated with latest <br>hollywood and bollywood movies<br><br>
+      
+                    </font></td>
+              </table>
+                  </table>
+                  <table bgcolor="#111" height="70px" width="100%">
+                    <tr>
+                    </tr>
+                     <tr>
+                       <td>
+      
+                       </td>
+                          <td>
+                        <center><font color="orange" size="4">&copy;MovieMania 2019.All Rights Reserved</font></center>
+                          </td>
+                      </tr>
+                      <tr>
+                      </tr>
+                    </table>      
+                    <div id="ticket" class="modal">
+                      
+                        <div class="container">
+                          
+                         
+                            <span class="close-signup" onclick="document.getElementById('ticket').style.display='none'"><font color="orange" >X</font></span><br>
+                           <font color="black" size="6" family="Trattatello, fantasy"><i><center>Movie Mania</center></i></font><br>
+                      
+                              <br> <div class="screen"><font size="4" family="Verdana"><center>SCREEN</center></font>
+                              <br>
+                              <img src="D:\css mp\images\line.png" class="line">
+                              <table>
+                                  <table height="40%" width="100%"><tr>
+
+                                    </tr></table>
+                                <tr style="margin-bottom:100px;">
+
+                                    <td>&nbsp<button class="seat" id="id1" name="0" onclick="ButtonState('id1',this.name)">&nbsp&nbsp&nbsp</button></td>
+                                    <td>&nbsp&nbsp<button class="seat" id="id2" name="0" onclick="ButtonState('id2',this.name)">&nbsp&nbsp&nbsp</button></td>
+                                    <td>&nbsp&nbsp<button class="seat" id="id3" name="0"onclick="ButtonState('id3',this.name)">&nbsp&nbsp&nbsp</button></td>
+                                    <td>&nbsp&nbsp<button class="seat" id="id4" name="0" onclick="ButtonState('id4',this.name)">&nbsp&nbsp&nbsp</button></td>
+                                    <td>&nbsp&nbsp<button class="seat" id="id5" name="0" onclick="ButtonState('id5',this.name)">&nbsp&nbsp&nbsp</button></td>
+                                    <td>&nbsp&nbsp<button class="seat" id="id6" name="0" onclick="ButtonState('id6',this.name)">&nbsp&nbsp&nbsp</button></td>
+                                    <td>&nbsp&nbsp<button class="seat"id="id7" name="0" onclick="ButtonState('id7',this.name)">&nbsp&nbsp&nbsp</button></td>
+                                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<font color="orange" size="4">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTime:</font>&nbsp<font color="black">October 18,9pm</font>
+                                  </tr>
+                               <table height="40%" width="100%"><tr>
+
+                                </tr></table>
+                               
+                               <tr>
+                                  <td>&nbsp<button class="seat"id="id35" name="0" onclick="ButtonState('id35',this.name)">&nbsp&nbsp&nbsp</button></td>
+                                  <td>&nbsp&nbsp<button class="seat" style="background-color:red;">&nbsp&nbsp&nbsp</button></td>
+                                  <td>&nbsp&nbsp<button class="seat" style="background-color:red;">&nbsp&nbsp&nbsp</button></td>
+                                  <td>&nbsp&nbsp<button class="seat" style="background-color:red;">&nbsp&nbsp&nbsp</button></td>
+                                  <td>&nbsp&nbsp<button class="seat" style="background-color:red;">&nbsp&nbsp&nbsp</button></td>
+                                  <td>&nbsp&nbsp<button class="seat" id="id8" name="0" onclick="ButtonState('id8',this.name)">&nbsp&nbsp&nbsp</button></td>
+                                  <td>&nbsp&nbsp<button class="seat" id="id9" name="0" onclick="ButtonState('id9',this.name)">&nbsp&nbsp&nbsp</button></td>
+                                  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<font color="orange" size="4">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTickets:</font><font color="black"><span id="no" class="total"></span></font>
+                                </tr>
+                                  <table height="40%" width="100%"><tr>
+
+                                  </tr></table>
+                                
+                              <tr>
+                                <td>&nbsp<button class="seat" id="id10" name="0" onclick="ButtonState('id10',this.name)">&nbsp&nbsp&nbsp</button></td>
+                                <td>&nbsp&nbsp<button class="seat" id="id11" name="0" onclick="ButtonState('id11', this.name)">&nbsp&nbsp&nbsp</button></td>
+                                <td>&nbsp&nbsp<button class="seat" id="id12" name="0" onclick="ButtonState('id12',this.name)">&nbsp&nbsp&nbsp</button></td>
+                                <td>&nbsp&nbsp<button class="seat" id="id13"  name="0"  onclick="ButtonState('id13',this.name)">&nbsp&nbsp&nbsp</button></td>
+                                <td>&nbsp&nbsp<button class="seat" id="id14"  name="0" onclick="ButtonState('id14',this.name)">&nbsp&nbsp&nbsp</button></td>
+                                <td>&nbsp&nbsp<button class="seat" id="id15"  name="0" onclick="ButtonState('id15',this.name)">&nbsp&nbsp&nbsp</button></td>
+                                <td>&nbsp&nbsp<button class="seat" id="id16"  name="0" onclick="ButtonState('id16',this.name)">&nbsp&nbsp&nbsp</button></td>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<font color="orange" size="4">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspTotal:</font><font color="black"><span id="price" class="total"></span></font>
+                           </tr>
+                           <table height="40%" width="100%"><tr>
+
+                            </tr></table>
+                           <tr>
+                              <td>&nbsp<button class="seat" id="id17"  name="0" onclick="ButtonState('id17',this.name)">&nbsp&nbsp&nbsp</button></td>
+                              <td>&nbsp&nbsp<button class="seat" id="id18"  name="0" onclick="ButtonState('id18',this.name)">&nbsp&nbsp&nbsp</button></td>
+                              <td>&nbsp&nbsp<button class="seat" id="id19"  name="0" onclick="ButtonState('id19',this.name)">&nbsp&nbsp&nbsp</button></td>
+                              <td>&nbsp&nbsp<button class="seat" style="background-color:red;">&nbsp&nbsp&nbsp</button></td>
+                              <td>&nbsp&nbsp<button class="seat" style="background-color:red;">&nbsp&nbsp&nbsp</button></td>
+                              <td>&nbsp&nbsp<button class="seat" style="background-color:red;">&nbsp&nbsp&nbsp</button></td>
+                              <td>&nbsp&nbsp<button class="seat"id="id20"  name="0" onclick="ButtonState('id20',this.name)">&nbsp&nbsp&nbsp</button></td>
+                              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a onclick="document.getElementById('cash').style.display='block'"><input type="button" class="booknow" value="Book Now" id="book"></center></a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <font color="black"><p></p></font>
+                         </tr>
+                         <table height="40%" width="100%"><tr>
+
+                          </tr></table>
+                         <tr>
+                            <td>&nbsp<button class="seat" id="id36" name="0" onclick="ButtonState('id36',this.name)">&nbsp&nbsp&nbsp</button></td>
+                            <td>&nbsp&nbsp<button class="seat" id="id21"  name="0" onclick="ButtonState('id21',this.name)">&nbsp&nbsp&nbsp</button></td>
+                            <td>&nbsp&nbsp<button class="seat" id="id22" name="0"  onclick="ButtonState('id22',this.name)">&nbsp&nbsp&nbsp</button></td>
+                            <td>&nbsp&nbsp<button class="seat" id="id23"  name="0" onclick="ButtonState('id23',this.name)">&nbsp&nbsp&nbsp</button></td>
+                            <td>&nbsp&nbsp<button class="seat" id="id24"  name="0" onclick="ButtonState('id24',this.name)">&nbsp&nbsp&nbsp</button></td>
+                            <td>&nbsp&nbsp<button class="seat" style="background-color:red;">&nbsp&nbsp&nbsp</button></td>
+                            <td>&nbsp&nbsp<button class="seat" style="background-color:red;">&nbsp&nbsp&nbsp</button></td>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button class="seat">&nbsp&nbsp&nbsp</button>&nbsp&nbsp<font color="black" size="4"> Available </font>
+                       </tr>
+                       <table height="40%" width="100%"><tr>
+
+                        </tr></table>
+                       <tr>
+                          <td>&nbsp<button class="seat" id="id37" name="0" onclick="ButtonState('id37',this.name)">&nbsp&nbsp&nbsp</button></td>
+                          <td>&nbsp&nbsp<button class="seat" id="id25"  name="0" onclick="ButtonState('id25',this.name)">&nbsp&nbsp&nbsp</button></td>
+                          <td>&nbsp&nbsp<button class="seat" id="id26"  name="0" onclick="ButtonState('id26',this.name)">&nbsp&nbsp&nbsp</button></td>
+                          <td>&nbsp&nbsp<button class="seat" id="id27"  name="0" onclick="ButtonState('id27',this.name)">&nbsp&nbsp&nbsp</button></td>
+                          <td>&nbsp&nbsp<button class="seat" id="id28"  name="0" onclick="ButtonState('id28',this.name)">&nbsp&nbsp&nbsp</button></td>
+                          <td>&nbsp&nbsp<button class="seat" id="id29"  name="0" onclick="ButtonState('id29',this.name)">&nbsp&nbsp&nbsp</button></td>
+                          <td>&nbsp&nbsp<button class="seat" id="id30"  name="0" onclick="ButtonState('id30',this.name)">&nbsp&nbsp&nbsp</button></td>
+                          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button class="seat" style="background-color:green;">&nbsp&nbsp&nbsp</button>&nbsp&nbsp <font color="black" size="4">Selected</font>
+                     </tr>
+                     <table height="40%" width="100%"><tr>
+
+                      </tr></table>
+                     <tr>
+                        <td>&nbsp<button class="seat" style="background-color:red;">&nbsp&nbsp&nbsp</button></td>
+                        <td>&nbsp&nbsp<button class="seat" style="background-color:red;">&nbsp&nbsp&nbsp</button></td>
+                        <td>&nbsp&nbsp<button class="seat" style="background-color:red;">&nbsp&nbsp&nbsp</button></td>
+                        <td>&nbsp&nbsp<button class="seat" id="id31"  name="0" onclick="ButtonState('id31',this.name)">&nbsp&nbsp&nbsp</button></td>
+                        <td>&nbsp&nbsp<button class="seat" id="id32"  name="0" onclick="ButtonState('id32',this.name)">&nbsp&nbsp&nbsp</button></td>
+                        <td>&nbsp&nbsp<button class="seat" id="id33"  name="0" onclick="ButtonState('id33',this.name)">&nbsp&nbsp&nbsp</button></td>
+                        <td>&nbsp&nbsp<button class="seat" id="id34"  name="0" onclick="ButtonState('id34',this.name)">&nbsp&nbsp&nbsp</button></td>
+                        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button class="seat" style="background-color:red;">&nbsp&nbsp&nbsp</button>&nbsp&nbsp <font color="black" size="4">Sold</font>
+                   </tr>
+                   
+              </table>
+              
+
+                          </div>
+                        </div>
+                        
+                        </form>
+                     </div>
+        <script>
+           var count =0;
+         function ButtonState(ID,state){
+           var n = parseInt(state);
+           
+            var i = document.getElementById(ID);
+            if(n==0){
+              i.style.backgroundColor="#008000";
+              document.getElementById(ID).name="1";
+              n=1;
+              count=count+1;
+              document.getElementById("no").innerHTML=count;
+              var total=count*150;
+              document.getElementById("price").innerHTML=total;
+              
+              
+            }
+          else{
+            i.style.backgroundColor="#A9A9A9";
+            document.getElementById(ID).name="0";
+            n=0;
+            count = count - 1;
+            document.getElementById("no").innerHTML=count;
+              var total=count*150;
+              document.getElementById("price").innerHTML=total;
+          }
+        }
+        </script>
+
+<div id="cash" class="modal1">
+  <form name="payment">
+      
+    <div class="container1">
+        <span class="close-signup" onclick="document.getElementById('cash').style.display='none'"><font color="orange" >X</font></span>
+
+      <h1><center>Payment</center></h1>
+
+    
+      <hr>
+      <label for="Name" class="color"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name"><br>
+
+    <label for="email" class="color"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email">
+
+    &nbsp&nbsp<a onclick="document.getElementById('credit').style.display='block'"><input class="checkmark" type="radio" name="r1"></a><b>Credit/Debit</b>  &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp &nbsp&nbsp &nbsp&nbsp<a  onclick="document.getElementById('net').style.display='block'"><input class="checkmark2" type="radio" name="r1" class="color"></a><b>Net Banking</b>
+    
+    </div>
+    </form>
+    </div>
+    <div id="credit" class="modal1">
+        <form name="credit">
+            
+            <div class="container1" >
+                <span class="close-signup" onclick="document.getElementById('credit').style.display='none'"><font color="orange">X</font></span>
+                <h1><center>Pay By Credit/Debit</center></h1>
+                
+
+                <hr>
+
+                <label for="card" class="color"><b>Card No</b></label>
+                <input type="text" placeholder="Enter Card Number" name="card">
+
+                <label for="expd" class="color"><b>Expiry Date </b></label>
+                <input type="text" placeholder="Enter Expiry Date" name="expd"><br>
+
+                <label for="cvv" class="color"><b>CVV</b></label>
+                <input type="text" placeholder="Enter CVV" name="cvv">
+
+                <label for="holder" class="color"><b>Card-Holder Name </b></label>
+                <input type="text" placeholder="Enter Card-Holder Name" name="holder">
+
+                <div class="clearfix" >
+                    <input type="button" value="Cancel" onclick="document.getElementById('credit').style.display='none'" class="cancelbtn">
+                    <input type="button" class="subbtn" value="Submit" ><br>
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div id="net" class="modal1">
+        <form name="paynet">
+           
+            <div class="container1" style="height: 50%">
+                <span class="close-signup" onclick="document.getElementById('net').style.display='none'"><font color="orange" >X</font></span>
+               <br> <h1><center>Pay By Net Banking</center></h1> 
+                
+                
+                <hr>
+
+                <div class="color">&nbsp;&nbsp;<input type="radio" name="r1">&nbsp;&nbsp;Paytm<br><br></div>
+                <div class="color">&nbsp;&nbsp;<input type="radio" name="r1">&nbsp;&nbsp;Googleplay<br><br></div>
+                <div class="color">&nbsp;&nbsp;<input type="radio" name="r1">&nbsp;&nbsp;Phonepay<br><br></div>
+                <div class="color">&nbsp;&nbsp;<input type="radio" name="r1">&nbsp;&nbsp;Paypal<br><br></div>
+                
+                    
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('cash');
+        
+    </script>
+
+
+<div id="sign" class="modal2">
+    <form name="signup"  class="modal-content2">
+      <div class="container2">
+        <h1 class="size">Sign Up</h1>
+  
+  <span class="close-signup" onclick="document.getElementById('sign').style.display='none'">X</span>
+  
+      
+        <hr>
+        <label for="Name" class="fntcolor"><b><font color="black">Name</font></b></label>
+        <input type="text" placeholder="Enter Name" id="myUser" onblur="checkUsername()">
+  
+        <label for="email" class="fntcolor"><b><font color="black">Email ID</font></b></label>
+        <input type="text" placeholder="Enter Email" id="myEmailId" onblur="checkEmailId()">
+  
+        <label for="psw" class="fntcolor"><b><font color="black">Password</font> </b></label>
+        <input type="password" placeholder="Enter Password" size="8" id="myPassword" onblur="checkPassword()">
+  
+        <label for="cpass" class="fntcolor"><b><font color="black">Confirm Password</font></b></label>
+        <input type="password" placeholder="Confirm Password" size="8" id="myConfirmPassword" onblur="checkConfirmPassword()">
+  
+        <label for="phone No." class="fntcolor"><b><font color="black">Phone No</font></b></label>
+        <input type="text" placeholder="Enter Phone No." id="myMobileNumber" size="10" onblur="checkMobileNumber()">
+  
+        <div class="clearfix">
+          <input type="button" value="Cancel" onclick="document.getElementById('sign').style.display='none'" class="cancelbtn1"></b>
+          <a href="home.html"><input type="button" class="signupbtn1" value="Sign Up" onclick="return createMyUser();"></a>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+  
+  <div id="log" class="modal2">
+    <form name="login"  class="modal-content2">
+          <div class="container2">
+            <h1 class="size">Login</h1>
+            <span class="close-signup" onclick="document.getElementById('log').style.display='none'">X</span>
+            <hr>
+      
+            <label for="username" class="fntcolor"><b><font color="black">Username</font></b></label>
+            <input type="text" placeholder="Enter Username" id="myUserReg" >
+      
+            <label for="lpass" class="fntcolor"><b><font color="black">Password</font> </b></label>
+            <input type="password" placeholder="Enter Password" size="8" id="myPassReg" >
+      
+            <div class="clearfix">
+            <input type="button" value="Cancel" onclick="document.getElementById('log').style.display='none'" class="cancelbtn1">
+                     <input type="submit" class="logbtn1" value="Login" onclick ="return LoginUser()"><br>
+            <a onclick="document.getElementById('sign').style.display='block'"><div class="fntcolor" >Dont have an account ?</div></a>
+            </div>
+          </div>
+       </form>
+  </div>
+  
+  <script>
+  // Get the modal
+  var modal = document.getElementById('sign');
+  var modal = document.getElementById('log');
+  </script>
+  
+  <!--//////////////////             For Login            ///////////////////////////-->
+
+              
+    </body>
+</html>

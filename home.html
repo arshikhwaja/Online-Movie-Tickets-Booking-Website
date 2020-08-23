@@ -1,0 +1,1182 @@
+<html>
+    <head>
+      <title>Home</title>
+            <style>
+                    * {box-sizing: border-box}
+                    body {font-family: Verdana, sans-serif; margin:0}
+                    .mySlides {display: none}
+                    
+                    
+                    /* Slideshow container */
+                    .slideshow-container {
+                      max-width: 1000px;
+                      position: relative;
+                      margin: auto;
+                    }
+                    
+                    /* Next & previous buttons */
+                    .prev, .next {
+                      cursor: pointer;
+                      position: absolute;
+                      top: 50%;
+                      width: auto;
+                      padding: 40px;
+                      margin-top: -22px;
+                      color: white;
+                      font-weight: bold;
+                      font-size: 40px;
+                      transition: 0.6s;
+                      border-radius: 0 3px 3px 0;
+                      user-select:none;
+                      display: block;
+                    }
+                    
+                    /* Position the "next button" to the right */
+                    .next {
+                      right: 0;
+                      border-radius: 3px 0 0 3px;
+                    }
+                    
+                    /* On hover, add a black background color with a little bit see-through */
+                    .prev:hover, .next:hover {
+                      background-color:rgba(0,0,0,0.8);
+                    }
+                    
+                    /* Caption text */
+                    .text {
+                      color: #f2f2f2;
+                      font-size: 15px;
+                      padding: 8px 12px;
+                      position: absolute;
+                      bottom: 8px;
+                      width: 100%;
+                      text-align: center;
+                    }
+                    
+                    /* Number text (1/3 etc) */
+                    .numbertext {
+                      color: #f2f2f2;
+                      font-size: 12px;
+                      padding: 8px 12px;
+                      position: absolute;
+                      top: 0;
+                    }
+                    
+                    /* The dots/bullets/indicators */
+                   /* .dot {
+                      cursor: pointer;
+                      height: 15px;
+                      width: 15px;
+                      margin: 0 2px;
+                      background-color: #bbb;
+                      border-radius: 50%;
+                      display: inline-block;
+                      transition: background-color 0.6s ease;
+                    }*/
+                    
+                    .active, .dot:hover {
+                      background-color: #717171;
+                    }
+                    
+                    /* Fading animation 
+                    .fade {
+                      -webkit-animation-name: fade;
+                      -webkit-animation-duration: 1.5s;
+                      animation-name: fade;
+                      animation-duration: 1.5s;
+                    }
+                    
+                    @-webkit-keyframes fade {
+                      from {opacity: .4} 
+                      to {opacity: 1}
+                    }
+                    
+                    @keyframes fade {
+                      from {opacity: .4} 
+                      to {opacity: 1}
+                    }*/
+                    
+                    
+                   
+                    #BlackTable{
+                      display: inline-flexbox;
+                      margin: 0px;
+                      background-color:rgba(26,26,26,0.9);
+                      font-family: 'Times New Roman', Times, serif;
+                     }
+                    hr{
+                      background-color:rgba(26,26,26,0.9);
+                      
+                    }
+                    #mydiv{
+                      background-color:rgba(26,26,26,0.9);
+                    }
+                 
+                  .mytable{
+                    background-color: white;
+                  }
+                  img.HindiImg{
+                    max-width: 140px;
+                    max-height: 190px;
+                  }
+                  img.EnglishImg{
+                    max-width: 200px;
+                    max-height: 140px;
+                  }
+                  img.MarathiImg{
+                    max-width: 150px;
+                    max-height: 170px;
+                  }
+
+                
+                  #hindi{
+                    color: blue;
+                  }
+                  .windowHindi{
+                    width:"30%";
+                    background-color: rgb(192,192,192);
+                    font-size: 14;
+                
+
+                    }
+                  .windowEnglish{
+                    width:"40%";
+                    background-color: rgb(192,192,192);
+                    font-size: 14;
+                    padding: 10px;
+                    
+                  }
+                  
+                  .windowMarathi{
+                    width:"30%";
+                    background-color:rgba(26,26,26,0);
+                    background-color:rgb(192,192,192);
+                    font-size: 14;
+                  }
+
+                  .hindimoviecontent{
+                    text-align: left;
+                  }
+                  .englishmoviecontent{
+                    text-align: left;
+                  }
+                  table.mytable{
+                    background-color: rgb(192,192,192);
+                  }
+                  .footerTable{
+                    border-top-style: dashed;
+                    border-bottom-style: dashed;
+                    border-width: 5px;
+                    color: #C4AE83;
+                  }
+                  .headerTable{
+                  
+                    border-bottom-style: dashed;
+                    border-width: 5px;
+                    color: #C4AE83;
+                  }
+
+                  .topnav {
+                    overflow: hidden;
+                    background: rgba(26,26,26,0.9);
+                  }
+
+                  .topnav a {
+                    float: right;
+                    display: block;
+                    color: #f2f2f2;
+                    text-align: center;
+                    padding: 14px 16px;
+                    border-radius: 40px;
+                    text-decoration: none;
+                    font-size: 17px;
+                    box-shadow: #ddd;
+                  }
+
+                  .topnav a:hover {
+                    background-color: rgba(26,26,26,0.8);
+                    color: white;
+                    -ms-transform: scale(0.9);
+                    -webkit-transform: scale(0.9);
+                    transform: scale(0.9);
+                    transition: transform .2s;
+                    
+                  }
+
+                  
+
+                  .topnav a.active {
+                    background-color: orange;
+                    color: white;
+                  }
+
+                  .topnav .icon {
+                    display: none;
+                  }
+
+                  @media screen and (max-width: 600px) {
+                    .topnav a:not(:first-child) {display: none;}
+                    .topnav a.icon {
+                      float: left;
+                      display: block;
+                    }
+                  }
+
+                  @media screen and (max-width: 600px) {
+                    .topnav.responsive 
+                  {position: relative;}
+                    .topnav.responsive .icon {
+                      position: absolute;
+                      right: 0;
+                      top: 0;
+                    }
+                    .topnav.responsive a {
+                      float: none;
+                      display: block;
+                      text-align: left;
+                    }
+                  }
+                  .MenuBox{
+                    background-color:	#696969; 
+                    border-style: outset;
+                    box-shadow: 1px 1px 11px dimgray;
+                    border-color: #666; 
+                    background: transparent;
+                    color: white;
+                    padding: 10px 10px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: block;
+                    font-size: 18px;
+                    margin: 4px 2px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                  }
+                 
+                  .row {
+                     display: inline-block;
+                    float: right;
+                    }
+
+                  #mySearch {
+                    width: 100%;
+                    font-size: 18px;
+                    padding: 11px;
+                    border: 1px solid #ddd;
+                    float:left;
+                   }
+                   #myMenu {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                  
+                  }
+
+                  #myMenu li a {
+                    padding: 12px;
+                    text-decoration: none;
+                    color: black;
+                    display:block;
+                  }
+
+                  #myMenu li a:hover {
+                    background-color: #eee;
+                  }
+
+
+                  #mainselection {
+                        overflow: hidden;
+                        width: 240px;
+                        border-style: inset;
+                        border-width: 10px;
+                        -moz-border-radius: 9px;
+                        -webkit-border-radius: 9px;
+                        border-radius: 20px;
+                        box-shadow: 1px 1px 11px dimgray;
+                        background: #000;
+                        border: 10px;
+                  }
+
+                  #mainselection select {
+                    border-radius: 20px;
+                    color: #e2d5c0;
+                    background: transparent;
+                    border-width: 4px;
+                    border-style: inset;
+                    font-size: 20px;
+                    font-weight: bold;
+                    height: 40px;
+                    border-color: #666; 
+                    padding: 2px 10px;
+                    width: 240px;
+                    *width: 280px;
+                    *background: #111;
+                    -webkit-appearance: none;
+                     }
+
+                  #mainselection select option {
+                    background: transparent;
+                    background: #111;
+                    border-radius: 20px;
+                    color: #e2d5c0;
+                    
+                  }
+                  .backimg{
+                    width:50px;
+                    height: 50px;
+                    margin:0;
+                    background:url(\images\back.jpg) repeat;
+                   }
+
+
+
+
+
+/*Full-width input fields */
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0px 22px 0;
+  background: #f1f1f1;
+}
+
+/* Set a style for all buttons */
+
+button {
+  background-color: orange;
+  padding: 14px 20px;
+  width: 20%;
+}
+
+/* Extra styles for the cancel button */
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+  border: 5px solid darkgray;
+}
+.signupbtn,.logbtn{
+  padding: 14px 20px;
+  background-color: green;
+  border: 5px solid darkgray;
+}
+
+.signupbtn:hover {
+	background-color: lightgreen;
+}
+
+.logbtn:hover {
+	background-color: lightgreen;
+}
+
+.cancelbtn:hover {
+	background-color: lightred;
+}
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn,.logbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+  background-color: rgba(26,26,26,0.4);
+  
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  /*overflow: auto; Enable scroll if needed */
+  background-color: rgba(26, 26, 26, 0.5);
+  padding-top: 0%;
+  /*border: 5px solid darkgray;*/
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.container input {
+	border: 1px solid gray;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 30%; /* Could be more or less, depending on screen size */
+  border-radius: 30px;
+  border-style: outset;
+  border-color:5px solid gray;
+  
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.close-signup {
+	display: inline-block;
+	float: right;
+	font-size: 20px;
+	cursor: pointer;
+}
+.close-signup:hover {
+	color: red;
+}
+
+.container h1 {
+	margin : 0%;
+	display: inline-block;
+}
+
+
+
+
+
+
+
+                  </style>
+                    
+    </head>
+
+
+
+    <body onload="myCookie()">
+
+
+
+      <script type="text/javascript">
+
+        function getCookie(cookieName)
+                {
+                    var name = cookieName + "=";
+                    var allCookieArray = document.cookie.split(';');
+                      for(var i=0; i<allCookieArray.length; i++)
+                        {
+                          var temp = allCookieArray[i].trim();
+                          if (temp.indexOf(name)==0)
+                          return temp.substring(name.length,temp.length);
+                 }
+                return "";
+            }
+
+
+        function LoginUser() {
+          var length = getCookie('Total_User')
+                for(let i=0; i<=length; i++) {
+                   var username = document.getElementById('myUserReg').value
+                   var password = document.getElementById('myPassReg').value
+                   var user = getCookie('User '+i)
+                   var pass = getCookie('Password '+i)
+                 if(username == user)
+                     {
+                        if(password == pass)
+                            {
+                                alert("Welcome back "+username)
+                                return true;
+                        }
+                            else
+                            {
+                                alert("wrong Password")
+                                return false;
+                        }
+               }
+              }
+            alert("username does not exist")
+            return false;
+      }
+
+
+      </script>
+
+
+
+
+      
+      
+<!--//////////////////             For Registration            ///////////////////////////-->   
+
+
+      <script >
+         
+            var userNameBool = false
+            var numberBool = false
+            var emailBool = false
+            var passwordBool = false
+            var confirmPasswordBool = false
+        function setCookie(cookieName,cookieValue,daysToExpire) {
+                  var date = new Date();
+                  date.setTime(date.getTime()+(daysToExpire*24*60*60*1000));
+                  document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
+            }
+
+    function getCookie(cookieName) {
+                  var name = cookieName + "=";
+                  var allCookieArray = document.cookie.split(';');
+                      for(var i=0; i<allCookieArray.length; i++) {
+                            var temp = allCookieArray[i].trim();
+                            if (temp.indexOf(name)==0)
+                            return temp.substring(name.length,temp.length);
+                      }
+          return "";
+        }
+
+        function myCookie() {
+                    var userLength = getCookie('Total_User')
+                    if (userLength == null || userLength == "") {
+                    setCookie('Total_User',0,30)
+            }
+        }
+
+        //-------------------------------- Register A new User -----------------------------
+        
+        function createMyUser() {
+
+            if(userNameBool && numberBool && emailBool && passwordBool && confirmPasswordBool) 
+            {
+        
+                var userName = document.getElementById('myUser').value
+                var mobileNumber = document.getElementById('myMobileNumber').value
+                var emailID = document.getElementById('myEmailId').value
+                var password = document.getElementById('myPassword').value
+                
+                var userLength = getCookie('Total_User')
+                setCookie('User '+userLength, userName, 30)
+                setCookie('Mobile '+userLength, mobileNumber, 30)
+                setCookie('Email '+userLength, emailID, 30)
+                setCookie('Password '+userLength, password, 30)                
+                userLength = parseInt(userLength) + 1
+                setCookie('Total_User', userLength, 30)
+                return true;
+            }
+            else {  
+                alert("Please fill all fields correctly")
+                return false;
+            }
+        }
+
+
+        
+
+        //
+        //---------------------------- Username Validation ----------------------------
+        //
+
+        function checkUsername() {
+           var myRegexp = /^[a-zA-Z][a-zA-Z0-9_-]{5,}$/
+           if(myRegexp.test(document.getElementById('myUser').value)==false) {
+               alert("Name Must be greater then 6 character and not start from numbers")
+                userNameBool = false
+            }
+           else {
+                var length = getCookie('Total_User')
+                for(let i=0; i<=length; i++) {
+                    var username = getCookie('User '+i)
+                    var usernameTextField = document.getElementById('myUser').value
+                    if(usernameTextField == username)
+                    {
+                        alert('Username Already exists ')
+                        return;
+                    }
+                }
+                userNameBool = true
+           }
+        }
+        
+        //
+        //---------------------------- Mobile Number Validation ----------------------------
+        //
+
+        function checkMobileNumber() {
+            var myRegexp = /^[6-9]\d{9}$/
+            if(myRegexp.test(document.getElementById('myMobileNumber').value)==false) {
+               alert("Please Enter a valid Number")
+                numberBool = false
+           }
+           else {
+                var length = getCookie('Total_User')
+                for(let i=0; i<=length; i++) {
+                    var mobileNumber= getCookie('Mobile '+i)
+                    var mobileNumberTextField = document.getElementById('myMobileNumber').value
+                    if(mobileNumber == mobileNumberTextField)
+                    {
+                        alert('Mobile Number Already exists ')
+                        return;
+                    }
+                }
+                numberBool = true
+           }
+        }
+        
+        //
+        //---------------------------- EmailId Id Validation ----------------------------
+        //
+
+        function checkEmailId() {
+            var myRegexp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            if(myRegexp.test(document.getElementById('myEmailId').value)==false) {
+               alert("Please Enter a valid Email Id")
+                emailBool = false
+           }
+           else {
+                var length = getCookie('Total_User')
+                for(let i=0; i<=length; i++) {
+                    var emailID= getCookie('Email '+i)
+                    var emailIDTextField = document.getElementById('myEmailId').value
+                    if(emailID == emailIDTextField)
+                    {
+                        alert('Email Already exists ')
+                        return;
+                    }
+                }
+                emailBool = true
+           }
+        }
+        
+        //
+        //---------------------------- Password Validation ----------------------------
+        //
+
+        function checkPassword() {
+            var myRegexpStrong = /^.*(?=.{12,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/
+            var myRegexpMedium = /^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})(?=.*\d)((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/
+            if(myRegexpStrong.test(document.getElementById('myPassword').value)==true) {
+                passwordBool = true
+            } else if(myRegexpMedium.test(document.getElementById('myPassword').value)==true) {
+                passwordBool = true
+            } else {
+                alert("Password must contain atleast one lowercase one uppercase one digit and one alphanumeric")
+                passwordBool = false
+            }
+        }
+        
+        //
+        //---------------------------- Confirm Password Validation ----------------------------
+        //
+
+        function checkConfirmPassword() {
+
+            var a = document.getElementById('myConfirmPassword').value
+            var b = document.getElementById('myPassword').value
+            if(document.getElementById('myConfirmPassword').value=="") {
+                alert("Enter Cofirm Password")
+                document.MyForm.focus();
+                confirmPasswordBool = false
+            }
+            else if(a==b) {
+                confirmPasswordBool = true
+            }
+            else {
+                alert("Password does not match")                
+                confirmPasswordBool = false
+            }
+        }
+
+  </script>
+
+
+
+
+
+
+
+        <table  id="BlackTable" width="100%" height="4%" >
+          <tr>
+          </tr>
+        </table >
+        <div class="topnav">
+         <font size="10" color="orange" style="font-family:cursive">MovieMania</font>
+          <a onclick="document.getElementById('log').style.display='block'" ><div class="MenuBox" >Login</div></a>
+          <a  onclick="document.getElementById('sign').style.display='block'"><div class="MenuBox" >Sign in</div></a>
+          <a href="feedback.html"><div class="MenuBox">Feedback</div></a>
+          <a href="movie.html"><div class="MenuBox">Movies</div></a>
+          <a href="about.html"><div class="MenuBox">About</div></a>
+          <a href="#"><div class="MenuBox">Home</div></a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+          <table width="100%" height="4%" cellspacing="0" style="text-decoration: none" border="4" rules="none" id="BlackTable">
+              <tr>
+                <td>
+                  <font color="orange" size="4"><marquee>Online Movie Tickets Booking Website</marquee>
+                  </td>
+              </tr>
+          </table>
+         
+          <table width="100%" height="4%" cellspacing="0" style="text-decoration: none" id="BlackTable" >
+           <tr></tr>
+           <tr>
+             <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+             <td></td>
+             <td></td>
+             <td></td>
+             <td></td> 
+             <td>
+             </td>
+           </tr>
+          </table>
+          <div width="100%" height="40%" id="mydiv"> </div>
+           <table width="100%" height="4%" id="BlackTable" class="headerTable" >
+            <tr style="padding-bottom: 20px">
+              <td>
+                      <center>
+                            <div id="mainselection" style="padding-top: 0;">
+                            <select onchange="currentSlide(this.selectedIndex)">
+                              <option >Find a movie</option>
+                              <option >Lootcase</option>
+                              <option>Ujda Chaman</option>
+                              <option>Jhund</option>
+                              <option>Terminator: Dark Fate</option>
+                              <option >Midway</option>
+                              <option>Avengers End Game</option>
+                              <option>Palshichi PT</option>
+                              <option >Kaagar</option>
+                              <option>Sur Sapata</option>
+                             </select>
+                          </div>
+                      </center>
+                   <br>  
+              </td>
+            </tr>
+                  <tr>
+                    <td align="left"><div class="slideshow-container">
+
+                      <div class="mySlides fade">
+                          <div class="numbertext">1 / 9</div>
+                          <iframe width="1000" height="520" src="https://www.youtube.com/embed/muGyBhBCjzI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              <div class="text">Lootcase</div>
+                        </div>
+
+                      <div class="mySlides fade">
+                          <div class="numbertext">2 / 9</div>
+                          <iframe width="1000" height="520" src="https://www.youtube.com/embed/ls7RHTnCuiY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <div class="text">Ujda Chaman</div>
+                      </div>
+
+                      <div class="mySlides fade">
+                          <div class="numbertext">3 / 9</div>
+                          <iframe width="1000" height="520" src="https://www.youtube.com/embed/1O2moUYnq_E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              <div class="text">Jhund</div>
+                        </div>
+
+                    <div class="mySlides fade">
+                      <div class="numbertext">4 / 9</div>
+                      <iframe width="1000" height="520" src="https://www.youtube.com/embed/oxy8udgWRmo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <div class="text">Terminatior: Dark Fate</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">5 / 9</div>
+                      <iframe width="1000" height="520" src="https://www.youtube.com/embed/l9laReRAYFk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                     
+                       <div class="text">Midway</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">6 / 9</div>
+                      <iframe width="1000" height="520" src="https://www.youtube.com/embed/TcMBFSGVi1c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      <div class="text">Avenger EndGame</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                        <div class="numbertext">7 / 9</div>
+                        <iframe width="1000" height="520" src="https://www.youtube.com/embed/wfxTu093gBE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                     
+                         <div class="text">Palshichi PT</div>
+                      </div>
+
+                      <div class="mySlides fade">
+                          <div class="numbertext">8 / 9</div>
+                          <iframe width="1000" height="520" src="https://www.youtube.com/embed/vJpifFgZvBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                     
+                           <div class="text">Kaagar</div>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">9 / 9</div>
+                            <iframe width="1000" height="520" src="https://www.youtube.com/embed/5ipKb2f50OE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                     
+                             <div class="text">Sur Sapata</div>
+                          </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    
+                    </div>
+                    <br>
+                    
+                    <div style="text-align:center">
+                      <span class="dot" onclick="currentSlide(1)"></span> 
+                      <span class="dot" onclick="currentSlide(2)"></span> 
+                      <span class="dot" onclick="currentSlide(3)"></span> 
+                    </div>
+                    
+                    
+                    </td>
+                    </tr>
+        </table>
+        <br>     
+        <table  width="100%" height="4%" id="mytable" >
+          <tr>
+
+          </tr>
+          </table >
+          <table  width="100%" height="4%" id="mytable" bgcolor="#060C1A">
+              <tr>
+                <td><font size="6" color="orange">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHindi</font>
+                
+                </td>
+                <td><font size="6" color="orange">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEnglish</font></td>
+               
+                <td><font size="6" color="orange">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspMarathi</font></td>
+              </tr>
+          </table>
+              
+          <table  class="mytable">
+            <tr>
+               <td>
+                  <table class="windowHindi">
+                     <tr>
+                        <td width="30%" style="padding: 15px; " style="float: left" >
+                            <a href="https://www.youtube.com/watch?v=tQ0mzXRk-oM" target="_blank"><img src="D:\css mp\images\warr.jpg" class="HindiImg"></a>
+                        </td>
+                        <td width="70%" class="hindimoviecontent">
+                            <a href="https://www.youtube.com/watch?v=tQ0mzXRk-oM" id="hindi" target="_blank">War</a><br>Release Date: October 2, 2019<br>
+                               Actor: Hrithik Roshan|Tiger Shroff|Vaani kapoor<br>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="30%" style="padding: 15px; " style="float: left">
+                            <a href="https://www.youtube.com/watch?v=tz9TN7ixPW0" target="_blank"><img src="D:\css mp\images\zoyafactor.jpg" class="HindiImg"></a>                       
+                        </td>
+                        <td width="70%" class="hindimoviecontent">
+                            <a href="https://www.youtube.com/watch?v=tz9TN7ixPW0" id="hindi" target="_blank">The Zoya Factor</a><br>Release Date: September 20, 2019<br>
+                                  Actor: Sonam K Ahuja|Dulquer Salmaan
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="30%" style="padding: 15px; " style="float: left">
+                          <a href="https://www.youtube.com/watch?v=ZBkxUJJyMNk" target="_blank"><img src="D:\css mp\images\madeinchina.jpg" class="HindiImg"> </a>
+                        </td>
+                        <td width="70%" class="hindimoviecontent">
+                          <a href="https://www.youtube.com/watch?v=ZBkxUJJyMNk" id="hindi" target="_blank">Made In China</a><br>Release Date: October 25, 2019<br>
+                                Actor: Rajkumar Rao|Mouni Roy
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="30%" style="padding: 15px; " style="float: left">
+                          <a href="https://www.youtube.com/watch?v=C_NwlBN_6vA" target="_blank"><img src="D:\css mp\images\commando3.jpg" class="HindiImg"></a>
+                        </td>
+                        <td width="70%" class="hindimoviecontent">
+                            <a href="https://www.youtube.com/watch?v=C_NwlBN_6vA" id="hindi" target="_blank">Commando 3</a><br>Release Date: October 30, 2019<br>
+                                  Actor: Vidyut Jammwal|Adah Sharma
+                        </td>
+                      </tr>
+                      <tr>
+                          <td width="30%" style="padding: 15px; " style="float: left" >
+                              <a href="https://www.youtube.com/watch?v=VGGCoh_GZiU"  target="_blank"><img src="D:\css mp\images\satellite.jpg" class="HindiImg"></a>
+                          </td>
+                          <td width="70%" class="hindimoviecontent">
+                              <a href="https://www.youtube.com/watch?v=VGGCoh_GZiU" id="hindi" target="_blank">Satellite Shankar</a><br>Release Date: October 11, 2019<br>
+                                 Actor: Sooraj Pancholi|Salman Khan|<br>Megha Akash<br>
+                          </td>
+                      <tr>
+                        <td width="30%" style="padding: 15px; " style="float: left">
+                          <a href="https://www.youtube.com/watch?v=lgTHGZF3BQw" target="_blank"><img src="D:\css mp\images\dilkpaas.jpg" class="HindiImg"></a>
+                        </td>
+                        <td width="70%" class="hindimoviecontent">
+                          <a href="https://www.youtube.com/watch?v=lgTHGZF3BQw" id="hindi" target="_blank">Pal Pal Dil Ke Paas</a><br>Release Date: September 20, 2019<br>
+                                    Actor: Sunny Deol|Karan Deol|Sahher
+                        </td>
+                      </tr>
+                  </table>
+                </td>
+                
+                <td style="padding-left: 50px">
+                   <table class="windowEnglish">
+                      <tr>
+                        <td width="30%">
+                            <a href="https://www.youtube.com/watch?v=aaQ6tHK4yq8" target="_blank"><img src="D:\css mp\images\irishman.jpg" class="EnglishImg"></a>
+                        </td>
+                        <td width="70%" style="padding-left: 20px">
+                          <a href="https://www.youtube.com/watch?v=AbyJignbSj0" target="_blank"><img src="D:\css mp\images\gemini.jpg" class="EnglishImg"></a>
+                        </td>
+                      </tr>
+                      <tr>
+                          <td width="30%" class="englishmoviecontent" style="margin-top: 0%">
+                              <br><a href="https://www.youtube.com/watch?v=aaQ6tHK4yq8" id="hindi" target="_blank">The Irishman</a><br>Release Date: September 29,2019<br>
+                              Actor: Robert De Niro|Al Pacino|Joe Pesci  
+                            <br>                        
+                          </td>
+                          <td width="70%" class="englishmoviecontent" style="margin-top: 0%" >
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://www.youtube.com/watch?v=AbyJignbSj0" id="hindi" target="_blank">Gemini Man</a><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRelease Date: October 11, 2019<br>
+                            &nbsp&nbsp&nbsp&nbsp&nbsp&nbspActor: Will Smith|Mary Elizabeth <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspWinstead|Clive Owen    
+                            <br>                   
+                         </td>
+                      </tr>
+                      <tr>
+                        <td width="30%">
+                              <a href="https://www.youtube.com/watch?v=YPuhNtG47M0" target="_blank"><img src="D:\css mp\images\rambo.jpg" width="230px"class="EnglishImg"></a>
+                        </td>
+                        <td width="70%" style="padding-left: 20px">
+                            <a href="https://www.youtube.com/watch?v=ZlW9yhUKlkQ" target="_blank"><img src="D:\css mp\images\zombie.jpg" height="160px" class="EnglishImg"></a>
+                         </td>
+                      </tr>
+                      <tr>
+                          <td width="30%"class="englishmoviecontent" style="margin-top: 0%">
+                            <br><a href="https://www.youtube.com/watch?v=YPuhNtG47M0" id="hindi" target="_blank">Rambo Last Blood</a><br>Release Date: September 20, 2019<br>
+                              Actor:  Paz Vega|Sergio Peris-Mencheta|Adriana Barraza| Yvette Monreal                       
+                          </td>
+                          <td width="70%" class="englishmoviecontent" style="margin-top: 0%">
+                              &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://www.youtube.com/watch?v=ZlW9yhUKlkQ" id="hindi" target="_blank">Zombieland: Double Tap</a><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRelease Date: October 11, 2019<br>
+                              &nbsp&nbsp&nbsp&nbsp&nbsp&nbspActor:  Woody Harrelson|Jesse <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspEisenberg|Emma Stone                      
+                         </td>
+                      </tr>
+                      <tr>
+                          <td width="30%">
+                                <a href="https://www.youtube.com/watch?v=BOzFZxB-8cw" target="_blank"><img src="D:\css mp\images\doctor.jpg" width="240px" height="110px"class="EnglishImg"></a>
+                          </td>
+                          <td width="70%" style="padding-left: 20px">
+                              <a href="https://www.youtube.com/watch?v=RSUq4VfWfjE" target="_blank"><img src="D:\css mp\images\charlie.jpg" class="EnglishImg"></a>
+                           </td>
+                      </tr>
+                      <tr>
+                          <td width="30%"class="englishmoviecontent" style="margin-top: 0%">
+                            <a href="https://www.youtube.com/watch?v=BOzFZxB-8cw" id="hindi" target="_blank">Doctor Sleep</a><br>Release Date: November 8,2019<br>
+                              Actor:  Ewan McGregor|<br>Rebecca Ferguson                   
+                          </td>
+                          <td width="70%" class="englishmoviecontent" style="margin-top: 0%">
+                             <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="https://www.youtube.com/watch?v=RSUq4VfWfjE" id="hindi" target="_blank">Charlie's Angles</a><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspRelease Date: November <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp15,2019<br>
+                              &nbsp&nbsp&nbsp&nbsp&nbsp&nbspActor:  Kristen Stewart|Naomi <br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspScott|Ella Balinska                    
+                         </td>
+                      </tr>
+                    </table>      
+                </td>
+                 <td>
+                   <table class="windowMarathi">
+                     <tr>
+                        <td width="30%" style="padding: 15px; " style="float: right;" >
+                          <a href="https://www.youtube.com/watch?v=0FBEFnGT8Bk" target="_blank"><img src="D:\css mp\images\sorry.jpg" class="MarathiImg"></a>
+
+                      </td>
+                      <td width="70%" class="hindimoviecontent">
+                          <a href="https://www.youtube.com/watch?v=0FBEFnGT8Bk" id="hindi" target="_blank">Sorry</a><br>Release Date: October 18, 2019<br>
+                             Actor:  Mahi Kapoor|Pooja Meshram|Sulakshana Rai
+                      </td>
+                     </tr>
+                     <tr>
+                        <td width="30%" style="padding: 15px; " style="float: right;" >
+                          <a href="https://www.youtube.com/watch?v=6TDRub960V4" target="_blank"><img src="D:\css mp\images\balance.jpg" class="MarathiImg"></a>
+
+                      </td>
+                      <td width="70%" class="hindimoviecontent">
+                          <a href="https://www.youtube.com/watch?v=6TDRub960V4" id="hindi" target="_blank">Balance</a><br>Release Date: January 11, 2020<br>
+                             Actor:  Mahi Kapoor|Pooja Meshram|Sulakshana Rai
+                      </td>
+                     </tr>
+                     <tr>
+                        <td width="30%" style="padding: 15px; " style="float: right;" >
+                          <a href="https://www.youtube.com/watch?v=6wSLfO3z6U8" target="_blank"><img src="D:\css mp\images\khari.jpg" width="120px" height="180px" class="MarathiImg"></a>
+
+                      </td>
+                      <td width="70%" class="hindimoviecontent">
+                          <a href="https://www.youtube.com/watch?v=6wSLfO3z6U8" id="hindi" target="_blank">Khari Biscuit</a><br>Release Date: September 27, 2019<br>
+                             Actor:  Vedashree Khadilkar|Adarsh Kadam
+                      </td>
+                     </tr>
+                     <tr>
+                        <td width="30%" style="padding: 15px; " style="float: right;" >
+                          <a href="https://www.youtube.com/watch?v=AFL-4XZ42-w" target="_blank"><img src="D:\css mp\images\salman.jpg" class="MarathiImg"></a>
+
+                      </td>
+                      <td width="70%" class="hindimoviecontent">
+                          <a href="https://www.youtube.com/watch?v=AFL-4XZ42-w" id="hindi" target="_blank">Satarcha Salman</a><br>Release Date: October 11, 2019<br>
+                             Actor:  Ankush Chaudhari|Sai Tamhankar|Sachit Patil
+                      </td>
+                     </tr>
+                 </table>
+                </td>  
+               </tr>
+            </table> 
+            <table width="100%" cellspacing="45" cellpadding="9" id="BlackTable" class="footerTable">
+              <tr>
+                <td>
+                  <font color="#fffbef" size="4"><b>About Movie Mania</b></font><br><br>
+                  <font color="#666">Movie Mania is an online movie tickets <br>booking website where user can book tickets,<br>watch trailers of upcoming and latest movies<br>and many more. </font>
+                  
+                </td>
+                <td>
+             <font color="#fffbef" size="4"><b>Contact Us</b></font><br><br>
+             <font color="#666">Call us toll free:</font><br><br>
+              <font color="#666" size="6"> 1 8 0 0 3 8 2 9 1 6 </font>
+                </td>
+                <td>
+                   <font color="#fffbef" size="4"><b>Quick Links</b></font><br><br>
+                    <a href="home.html"><font color="#666">Home</a><br>
+                    <a href="about.html"><font color="#666">About Us</a><br>
+                    <a href="movie.html"><font color="#666">Movies</a><br>
+                    <a href="feedback.html"><font color="#666">Feedback</a><br>
+                </td><td></td>
+                <td>
+                    <font color="#fffbef" size="4"><b>Follow us on:<br></font><br><br>
+                    <a href="https://www.instagram.com/arshi_khwaja_/" target="_blank" bgcolor="rgba(26,26,26,0.9)"><img src="D:\css mp\images\instagram.png" width="30px" height="30px" ></a>&nbsp&nbsp
+                    <a href="https://in.pinterest.com/ansariraheen26/" target="_blank" bgcolor="rgba(26,26,26,0.9)"><img src="D:\css mp\images\pinterest.png" width="30px" height="30px" ></a>&nbsp&nbsp
+                    <a href="https://www.facebook.com/ETAMovie/" target="_blank" bgcolor="rgba(26,26,26,0.9)"><img src="D:\css mp\images\facebook.png" width="30px" height="30px" ></a>&nbsp&nbsp
+                   
+                    <br><br>
+                   <font color="#fffbef" size="4"><b>Movie Mania<br></font><br>
+                    <font color="#666">Stay updated with latest <br>hollywood and bollywood movies</font><br><br>
+                   </td>  
+              </table>
+              <table bgcolor="#111" height="70px" width="100%">
+                <tr>
+                </tr>
+                 <tr>
+                   <td>
+
+                   </td>
+                      <td>
+                    <center><font color="orange" size="4">&copy;MovieMania 2019.All Rights Reserved</font></center>
+                      </td>
+                  </tr>
+                  <tr>
+
+                  </tr>
+                </table>
+                <script>
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+                    
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+                    
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+                    
+                   function showSlides(n) {
+                      var i;
+                      var slides = document.getElementsByClassName("mySlides");
+                      var dots = document.getElementsByClassName("dot");
+                      if (n > slides.length) {slideIndex = 1}    
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                          slides[i].style.display = "none";  
+                      }
+
+                      for (i = 0; i < dots.length; i++) {
+                          dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";  
+                      dots[slideIndex-1].className += " active";
+                    }
+
+                    function myFunction() {
+                      var x = document.getElementById("myTopnav");
+                      if (x.className === "topnav") {
+                        x.className += " responsive";
+                      } else {
+                        x.className = "topnav";
+                      }
+                    }
+                    function searchFunction() {
+                      var input, filter, ul, li, a, i;
+                      input = document.getElementById("mySearch");
+                      filter = input.value.toUpperCase();
+                      ul = document.getElementById("myMenu");
+                      li = ul.getElementsByTagName("li");
+                      for (i = 0; i < li.length; i++) {
+                        a = li[i].getElementsByTagName("a")[0];
+                        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                          li[i].style.display = "";
+                        } else {
+                          li[i].style.display = "none";
+                        }
+                      }
+                    }
+                    </script>
+          
+
+
+
+					<div id="sign" class="modal">
+                  <form name="signup"  class="modal-content">
+                    <div class="container">
+                      <h1>Sign Up</h1>
+
+					  <span class="close-signup" onclick="document.getElementById('sign').style.display='none'">X</span>
+					  
+                    
+                      <hr>
+                      <label for="Name"><b>Name</b></label>
+                      <input type="text" placeholder="Enter Name" id="myUser" onblur="checkUsername()">
+                
+                      <label for="email"><b>Email</b></label>
+                      <input type="text" placeholder="Enter Email" id="myEmailId" onblur="checkEmailId()">
+                
+                      <label for="psw"><b>Password </b></label>
+                      <input type="password" placeholder="Enter Password" size="8" id="myPassword" onblur="checkPassword()">
+                
+                      <label for="cpass"><b>Confirm Password</b></label>
+                      <input type="password" placeholder="Confirm Password" size="8" id="myConfirmPassword" onblur="checkConfirmPassword()">
+                
+                      <label for="phone No."><b>Phone No</b></label>
+                      <input type="text" placeholder="Enter Phone No." id="myMobileNumber" size="10" onblur="checkMobileNumber()">
+                
+                      <div class="clearfix">
+                        <input type="button" value="Cancel" onclick="document.getElementById('sign').style.display='none'" class="cancelbtn"></b>
+                        <a href="home.html"><input type="button" class="signupbtn" value="Sign Up" onclick="return createMyUser();"></a><br><br>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+				
+				
+                <div id="log" class="modal">
+                  <form name="login"  class="modal-content">
+                        <div class="container">
+                          <h1>Login</h1>
+                          <span class="close-signup" onclick="document.getElementById('log').style.display='none'">X</span>
+                          <hr>
+                    
+                          <label for="username"><b>Username</b></label>
+                          <input type="text" placeholder="Enter Username" id="myUserReg" >
+                    
+                          <label for="lpass"><b>Password </b></label>
+                          <input type="password" placeholder="Enter Password" size="8" id="myPassReg" ><br><br>
+                    
+                          <div class="clearfix">
+                          <input type="button" value="Cancel" onclick="document.getElementById('log').style.display='none'" class="cancelbtn">
+                                   <a onclick="document.getElementById('sign').style.display='block'"></a> <input type="submit" class="logbtn" value="Login" onclick ="return LoginUser()"></a><br>
+                          <a onclick="document.getElementById('sign').style.display='block'">Dont have an account ?</a><br><br>
+                          </div>
+                        </div>
+                     </form>
+                </div>
+                
+                <script>
+                // Get the modal
+                var modal = document.getElementById('sign');
+                var modal = document.getElementById('log');
+                </script>
+
+<!--//////////////////             For Login            ///////////////////////////-->
+
+
+
+
+            
+    </body>
+
+</html>
